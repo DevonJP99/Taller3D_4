@@ -120,6 +120,7 @@
 -define:ENABLE_TERRAIN
 -define:ENABLE_TILEMAP
 -define:ENABLE_TIMELINE
+-define:ENABLE_INPUT_SYSTEM
 -define:ENABLE_LEGACY_INPUT_MANAGER
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
@@ -332,6 +333,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/com.unity.cinemachine.editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/NavMeshComponents.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/NavMeshComponentsEditor.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Unity.InputSystem.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.PlasticSCM.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.ProBuilder.AddOns.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.ProBuilder.AssetIdRemapUtility.ref.dll"
@@ -353,6 +355,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/CarritoMov.cs"
 "Assets/Scripts/EnemyFollow.cs"
+"Assets/Scripts/GYMBromove.cs"
 "Assets/Scripts/Menu/Back_button.cs"
 "Assets/Scripts/Menu/Main_Menu.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"

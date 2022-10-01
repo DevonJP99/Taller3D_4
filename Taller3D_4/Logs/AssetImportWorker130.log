@@ -1,0 +1,237 @@
+Using pre-set license
+Built from '2022.1/staging' branch; Version is '2022.1.16f1 (7321c9670bc2) revision 7545289'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19044) 64bit CoreSingleLanguage' Language: 'es' Physical Memory: 11717 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2022.1.16f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker130
+-projectPath
+C:/Users/Roberto/Documents/GitHub/Taller3D_4/Taller3D_4
+-logFile
+Logs/AssetImportWorker130.log
+-srvPort
+50289
+Successfully changed project path to: C:/Users/Roberto/Documents/GitHub/Taller3D_4/Taller3D_4
+C:/Users/Roberto/Documents/GitHub/Taller3D_4/Taller3D_4
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+mdb reader table full -> cleaning up stale readers. Current readers:
+    pid     thread     txnid
+      4688 43b8 -
+     12860 25e0 -
+      4688 180c -
+     21400 5450 -
+      9360 20ec -
+      4688 2144 -
+     16260 489c -
+      6648 38cc -
+     15064 1cec -
+      1912 e14 -
+      7700 43fc -
+     17780 1634 -
+     14100 423c -
+      3864 2f80 -
+     11036 1784 -
+     13632 3c4 -
+     13796 4d00 -
+     15412 518 -
+      6216 296c -
+     20576 2aec -
+      6892 32f8 -
+      4212 1fc8 -
+      9620 4e30 -
+     21944 40a0 -
+     14952 4650 1631
+     18376 9a0 -
+     15500 2050 -
+      8728 43d8 -
+     19432 33fc -
+     17864 5e0 -
+     12460 224c -
+      6424 2fac -
+     14852 2db0 -
+     20512 1810 -
+     13316 32d8 -
+     15888 e04 -
+      3028 1a78 -
+       924 2dc8 -
+     12372 2be4 -
+      1696 198 -
+     15388 4620 -
+     16780 32c4 1647
+     22836 3430 -
+     11324 3c58 -
+     15964 17c -
+     14808 b68 -
+     22144 1b98 -
+     14376 3760 -
+     12180 4fb0 -
+     19304 46dc -
+     17188 4c90 -
+     19352 398 -
+     11104 52c -
+     22736 5420 -
+     19344 212c -
+     23344 3d14 -
+      8680 fd0 -
+     21500 3948 -
+     16712 195c -
+      3020 2d2c -
+     23172 2228 -
+     23208 3cac 1667
+     17084 3fe0 -
+       872 3af0 -
+      2496 1c34 -
+      8400 4b04 -
+     20320 2488 -
+     20060 3964 -
+     22968 ddc -
+     17232 4810 -
+     15712 3514 -
+     16616 4cc8 -
+     21000 45b4 -
+     19056 dcc -
+      3224 380c -
+      8432 3ef4 -
+      9088 3898 -
+      7056 b40 -
+     23120 3f3c -
+      7988 2858 -
+     23160 a5c -
+     10376 7f8 -
+     12724 33c4 -
+     12904 1b24 -
+      2956 384c -
+      4256 668 -
+     15892 2d7c -
+      5640 2328 -
+      9960 4830 -
+     15552 71c -
+      8588 5270 -
+     20700 5a3c -
+     22892 1e30 -
+       248 2a0c -
+     11332 2cac -
+     21652 1b84 -
+     20224 57ac -
+      5736 4230 -
+     14096 33cc -
+     10976 438 -
+       416 4b80 -
+     13200 4d1c -
+     16040 2e00 1709
+     11740 1338 -
+     18264 4948 -
+     14108 50c -
+     19604 1060 -
+     10016 2ac -
+     16764 2330 -
+      7912 428 -
+     22520 2bfc -
+     20328 33f0 -
+      8616 10c4 -
+      7184 550c -
+      1608 51fc -
+      5764 43c0 -
+     20744 33f8 -
+      8876 4bec -
+      7476 5798 -
+      6024 462c -
+     22932 1a88 -
+      3860 3334 -
+     10972 36f0 -
+      9504 5600 -
+     10220 301c -
+     10084 364c -
+Cleaned out 121 stale readers
+Refreshing native plugins compatible for Editor in 1827.40 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.1.16f1 (7321c9670bc2)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.1.16f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Roberto/Documents/GitHub/Taller3D_4/Taller3D_4/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: AMD Radeon R7 Graphics (ID=0x9874)
+    Vendor:   ATI
+    VRAM:     5858 MB
+    Driver:   27.20.14501.28009
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.1.16f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.1.16f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.1.16f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56124
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.1.16f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.157375 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 524.44 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  7.093 seconds
+Domain Reload Profiling:
+	ReloadAssembly (7102ms)
+		BeginReloadAssembly (1448ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (6ms)
+		EndReloadAssembly (4269ms)
+			LoadAssemblies (1364ms)
+			RebuildTransferFunctionScriptingTraits (1ms)
+			SetupTypeCache (1236ms)
+				TypeCache.Initialize (1232ms)
+					TypeCache.ScanAssembly (1218ms)
+				ResolveRequiredComponents (4ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (283ms)
+			SetupLoadedEditorAssemblies (2089ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (47ms)
+				SetLoadedEditorAssemblies (48ms)
+				RefreshPlugins (528ms)
+				BeforeProcessingInitializeOnLoad (7ms)
+				ProcessInitializeOnLoadAttributes (1147ms)
+				ProcessInitializeOnLoadMethodAttributes (312ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.065760 seconds.
+Begin MonoManager ReloadAssembly

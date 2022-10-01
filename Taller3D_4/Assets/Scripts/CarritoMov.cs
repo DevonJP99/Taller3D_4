@@ -34,4 +34,5 @@ public class CarritoMov : MonoBehaviour
         Debug.DrawRay(transform.position, transform.forward * 3, Color.blue);
         MoveForce = Vector3.Lerp(MoveForce.normalized, transform.forward, Traction * Time.deltaTime)*MoveForce.magnitude;
     }
+ 
 }

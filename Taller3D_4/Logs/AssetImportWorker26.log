@@ -15,7 +15,7 @@ C:/Users/Roberto/Documents/GitHub/Taller3D_4/Taller3D_4
 -logFile
 Logs/AssetImportWorker26.log
 -srvPort
-56615
+50289
 Successfully changed project path to: C:/Users/Roberto/Documents/GitHub/Taller3D_4/Taller3D_4
 C:/Users/Roberto/Documents/GitHub/Taller3D_4/Taller3D_4
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,3 +47,9 @@ C:/Users/Roberto/Documents/GitHub/Taller3D_4/Taller3D_4
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 12073.47 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.1.16f1 (7321c9670bc2)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.1.16f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Roberto/Documents/GitHub/Taller3D_4/Taller3D_4/Assets
+GfxDevice: creating device client; threaded=0; jobified=0

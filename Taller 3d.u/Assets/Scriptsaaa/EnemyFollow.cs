@@ -6,8 +6,9 @@ using UnityEngine.AI;
 public class EnemyFollow : MonoBehaviour
 {
     public NavMeshAgent Agent;
-    
+    PlayerStaticVariable compras;
     public Transform player;
+    public int Daño;
     public LayerMask whatIsGround, whatIsPlayer;
     //patrolling
     public Vector3 walkpoint;
@@ -27,7 +28,7 @@ public class EnemyFollow : MonoBehaviour
     {
         player = GameObject.Find("Player").transform;
         Agent = GetComponent<NavMeshAgent>();
-      
+        compras = GameObject.Find("Player").GetComponent<PlayerStaticVariable>();
 
     }
     private void Update()
@@ -95,5 +96,14 @@ public class EnemyFollow : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, sightRange);
     }
-  
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+
+            compras.vida = compras.vida - Daño;
+        }
+
+    }
+
 }

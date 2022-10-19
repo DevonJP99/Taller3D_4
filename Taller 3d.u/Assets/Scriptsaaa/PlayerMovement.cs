@@ -6,16 +6,10 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement")]
-    public float moveSpeed;
-
+    public float ActualmoveSpeed;
+    public float normalSpeed;
+    public float runSpeed;
     public float groundDrag;
-
-    
-
-    [HideInInspector] public float walkSpeed;
-    [HideInInspector] public float sprintSpeed;
-
-   
 
     [Header("Ground Check")]
     public float playerHeight;
@@ -77,11 +71,19 @@ public class PlayerMovement : MonoBehaviour
 
         // on ground
         if (grounded)
-            rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
+            rb.AddForce(moveDirection.normalized * ActualmoveSpeed* 10f, ForceMode.Force);
 
         // in air
         else if (!grounded)
-            rb.AddForce(moveDirection.normalized * moveSpeed * 10f , ForceMode.Force);
+            rb.AddForce(moveDirection.normalized * ActualmoveSpeed * 10f , ForceMode.Force);
+        if (Input.GetButton("Sprint"))
+        {
+            ActualmoveSpeed = runSpeed;
+        }
+       else 
+        {
+            ActualmoveSpeed = normalSpeed;
+        }
     }
 
     private void SpeedControl()
@@ -89,13 +91,11 @@ public class PlayerMovement : MonoBehaviour
         Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
 
         // limit velocity if needed
-        if (flatVel.magnitude > moveSpeed)
+        if (flatVel.magnitude > ActualmoveSpeed)
         {
-            Vector3 limitedVel = flatVel.normalized * moveSpeed;
+            Vector3 limitedVel = flatVel.normalized * ActualmoveSpeed;
             rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
         }
-
-       
     }
 
 }

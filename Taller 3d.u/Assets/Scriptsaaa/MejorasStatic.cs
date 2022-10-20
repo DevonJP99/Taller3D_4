@@ -6,7 +6,8 @@ public static class MejorasStatic
 {
     public static int coins;
     public static bool[] mejorasDesbloqueadas = new bool[] { false, false, false};
-
+    public static bool ofertaslimitas=false;
+    public static bool Si = false;
     public static void compraMejora(int i)
     {
         if(i==0 && coins>=5)

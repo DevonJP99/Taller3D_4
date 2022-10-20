@@ -9,8 +9,11 @@ public class ProducCaracter : MonoBehaviour
     public int price;
     public int descuento;
     public int puntaje;
+    public int actualPunt;
     public bool interactuable;
     public Renderer rend;
+    public int a = 1;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -20,13 +23,15 @@ public class ProducCaracter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        LimitOfers();
+
         if (compras.compras + size <= compras.Maxcompras && interactuable && Input.GetKeyDown(KeyCode.E))
         {
             compras.compras = compras.compras + size;
             rend.enabled = false;
-            compras.puntaje = compras.puntaje + puntaje;
+            compras.puntaje = compras.puntaje + actualPunt;
         }
+
     }
     private void Awake()
     {
@@ -40,8 +45,8 @@ public class ProducCaracter : MonoBehaviour
         {
             interactuable = true;
         }
-       
-       
+        
+
     }
     private void OnTriggerExit(Collider other)
     {
@@ -53,5 +58,16 @@ public class ProducCaracter : MonoBehaviour
     public void Puntos()
     {
         puntaje = price +(price* descuento)/100;
+        actualPunt = puntaje;
+    }
+    public void LimitOfers()
+    {
+        if (MejorasStatic.ofertaslimitas == true && MejorasStatic.Si)
+        {
+            a=2;
+            actualPunt = puntaje * a;
+            MejorasStatic.Si = false;
+            
+        }
     }
 }

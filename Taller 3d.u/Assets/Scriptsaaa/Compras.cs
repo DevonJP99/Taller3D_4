@@ -1,25 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class Compras : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public float time;
+    public float timerepeat;
+    public float timer;
+    public TextMeshProUGUI Ofertas;
+    
+    private void Start()
     {
+        Ofertas = GameObject.Find("Ofertas").GetComponent<TextMeshProUGUI>();
         
     }
-
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        InvokeRepeating("ofertas", time, timerepeat);
+       
     }
-    private void OnTriggerEnter(Collider other)
+    private void ofertas()
     {
-        if(other.gameObject.CompareTag("Player"))
-        {
-            Destroy(gameObject);
-        }
+        MejorasStatic.ofertaslimitas = true;
+        MejorasStatic.Si = true;
+        Ofertas.text = "Han empezado las ofertas limitadas";       
     }
+    
 }

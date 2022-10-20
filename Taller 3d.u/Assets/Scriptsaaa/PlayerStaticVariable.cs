@@ -12,9 +12,11 @@ public class PlayerStaticVariable : MonoBehaviour
     public bool puedesComprar=true;
     public int vida;
     public int puntaje;
+    public int puntoMembresia;
     public TextMeshProUGUI textMesh;
     public TextMeshProUGUI Espacio;
     public TextMeshProUGUI health;
+    public TextMeshProUGUI puntoMembres;
     public bool interactuable=false;
     void Start()
     {
@@ -26,6 +28,7 @@ public class PlayerStaticVariable : MonoBehaviour
         textMesh = GameObject.Find("Puntos").GetComponent<TextMeshProUGUI>();
         Espacio = GameObject.Find("Espacio").GetComponent<TextMeshProUGUI>();
         health = GameObject.Find("Vida").GetComponent<TextMeshProUGUI>();
+        puntoMembres = GameObject.Find("Membre").GetComponent<TextMeshProUGUI>();
     }
 
     // Update is called once per frame
@@ -38,8 +41,12 @@ public class PlayerStaticVariable : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-       
 
+        if (other.gameObject.CompareTag("Objetos") && MejorasStatic.ofertaslimitas)
+        {
+            MejorasStatic.coins++;
+            puntoMembresia = MejorasStatic.coins;
+        }
     }
     private void OnTriggerExit(Collider other)
     {

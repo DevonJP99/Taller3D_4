@@ -17,6 +17,7 @@ public class PlayerStaticVariable : MonoBehaviour
     public TextMeshProUGUI Espacio;
     public TextMeshProUGUI health;
     public TextMeshProUGUI puntoMembres;
+
     public bool interactuable=false;
     void Start()
     {
@@ -37,6 +38,7 @@ public class PlayerStaticVariable : MonoBehaviour
         textMesh.text = puntaje.ToString();
         Espacio.text = compras.ToString();
         health.text = vida.ToString();
+        puntoMembres.text = MejorasStatic.coins.ToString();
     }
     
     private void OnTriggerEnter(Collider other)

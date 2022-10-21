@@ -11,6 +11,7 @@ public class ProducCaracter : MonoBehaviour
     public int puntaje;
     public int actualPunt;
     public bool interactuable;
+    public int puntoMembresia;
     public Renderer rend;
     public int a = 1;
     
@@ -30,6 +31,8 @@ public class ProducCaracter : MonoBehaviour
             compras.compras = compras.compras + size;
             rend.enabled = false;
             compras.puntaje = compras.puntaje + actualPunt;
+            MejorasStatic.coins++;
+            puntoMembresia = MejorasStatic.coins;
         }
 
     }
@@ -69,5 +72,9 @@ public class ProducCaracter : MonoBehaviour
             MejorasStatic.Si = false;
             
         }
+        else if(MejorasStatic.ofertaslimitas == false && MejorasStatic.Si==false)
+        {
+            actualPunt = puntaje;
+        } 
     }
 }

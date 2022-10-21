@@ -14,11 +14,11 @@ public class Compras : MonoBehaviour
     private void Start()
     {
         Ofertas = GameObject.Find("Ofertas").GetComponent<TextMeshProUGUI>();
-        
+        StartCoroutine(Sale());
     }
     private void Update()
     {
-        InvokeRepeating("ofertas", time, timerepeat);
+        //InvokeRepeating("ofertas", time, timerepeat);
        
     }
     private void ofertas()
@@ -27,5 +27,20 @@ public class Compras : MonoBehaviour
         MejorasStatic.Si = true;
         Ofertas.text = "Han empezado las ofertas limitadas";       
     }
-    
+
+    IEnumerator Sale()
+    {
+        yield return new WaitForSeconds(time);
+        MejorasStatic.ofertaslimitas = true;
+        MejorasStatic.Si = true;
+        Ofertas.text = "Han empezado las ofertas limitadas";
+
+        yield return new WaitForSeconds(timerepeat);
+        Ofertas.text = "Han terminado las ofertas limitadas ";
+        MejorasStatic.ofertaslimitas = false;
+        MejorasStatic.Si = false;
+
+
+    }
+
 }

@@ -17,6 +17,7 @@ public class PlayerStaticVariable : MonoBehaviour
     public TextMeshProUGUI Espacio;
     public TextMeshProUGUI health;
     public TextMeshProUGUI puntoMembres;
+    public bool Golpeado;
 
     public bool interactuable=false;
     void Start()
@@ -36,9 +37,9 @@ public class PlayerStaticVariable : MonoBehaviour
     void Update()
     {
         textMesh.text = puntaje.ToString();
-        Espacio.text = compras.ToString();
+        Espacio.text = compras.ToString()+ "/" + Maxcompras.ToString();
         health.text = vida.ToString();
-        puntoMembres.text = MejorasStatic.coins.ToString();
+        puntoMembres.text = MejorasStatic.coins.ToString() ;
     }
     
     private void OnTriggerEnter(Collider other)

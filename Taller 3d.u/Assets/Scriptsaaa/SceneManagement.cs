@@ -24,8 +24,17 @@ public class SceneManagement : MonoBehaviour
         SceneManager.LoadScene("Market");
     }
 
+    public void loadMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
     public void exit()
     {
         Application.Quit();
+    }
+
+    public void AumentarCoins()
+    {
+        MejorasStatic.coins = MejorasStatic.coins + 5;
     }
 }

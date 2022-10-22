@@ -11,11 +11,20 @@ public class ProducCaracter : MonoBehaviour
     public int puntaje;
     public int actualPunt;
     public bool interactuable;
-    public int puntoMembresia;
     public Renderer rend;
     public int a = 1;
-    
+    public bool maldito = false;
+    public int b;
+
+
     // Start is called before the first frame update
+    private void Awake()
+    {
+        compras = GameObject.Find("Player").GetComponent<PlayerStaticVariable>();
+        descuento = Random.Range(1, 11) * 10;
+        Puntos();
+        b = Random.Range(1,10);
+    }
     void Start()
     {
         rend = GetComponent<Renderer>();
@@ -26,21 +35,20 @@ public class ProducCaracter : MonoBehaviour
     {
         LimitOfers();
 
-        if (compras.compras + size <= compras.Maxcompras && interactuable && Input.GetKeyDown(KeyCode.E))
+        if (compras.compras + size <= compras.Maxcompras && interactuable && Input.GetKeyDown(KeyCode.E) && MejorasStatic.ofertaslimitas == false)
         {
             compras.compras = compras.compras + size;
             rend.enabled = false;
             compras.puntaje = compras.puntaje + actualPunt;
-            MejorasStatic.coins++;
-            puntoMembresia = MejorasStatic.coins;
+        }
+        if (compras.compras + size <= compras.Maxcompras && interactuable && Input.GetKeyDown(KeyCode.E) && MejorasStatic.ofertaslimitas == true)
+        {
+            compras.compras = compras.compras + size;
+            rend.enabled = false;
+            compras.puntaje = compras.puntaje + actualPunt;
+            compras.puntoMembresia = compras.puntoMembresia + 1;
         }
 
-    }
-    private void Awake()
-    {
-        compras = GameObject.Find("Player").GetComponent<PlayerStaticVariable>();
-        descuento = Random.Range(1,11)*10;
-        Puntos();
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -49,7 +57,6 @@ public class ProducCaracter : MonoBehaviour
             interactuable = true;
         }
         
-
     }
     private void OnTriggerExit(Collider other)
     {
@@ -76,5 +83,13 @@ public class ProducCaracter : MonoBehaviour
         {
             actualPunt = puntaje;
         } 
+    }
+
+    public void ObjetoMaldito()
+    {
+        if(b%7 == 0)
+        {
+            maldito = true;
+        }
     }
 }

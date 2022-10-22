@@ -14,6 +14,9 @@ public class Recibir2 : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             compras.compras = 0;
+            MejorasStatic.coins = MejorasStatic.coins + compras.puntoMembresia;
+
+            compras.puntoMembresia = 0;
         }
     }
 }

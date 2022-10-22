@@ -44,11 +44,6 @@ public class PlayerStaticVariable : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        if (other.gameObject.CompareTag("Objetos") && MejorasStatic.ofertaslimitas)
-        {
-            MejorasStatic.coins++;
-            puntoMembresia = MejorasStatic.coins;
-        }
     }
     private void OnTriggerExit(Collider other)
     {

@@ -59,4 +59,9 @@ public class PlayerStaticVariable : MonoBehaviour
         }
        
     }
+
+    public float PercentComprasFilled()
+    {
+        return (float)((float)compras / (float)Maxcompras);
+    }
 }

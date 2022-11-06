@@ -8,6 +8,7 @@ TagManager:
   - Auto
   - Enemy
   - Objetos
+  - Cart Controller
   layers:
   - Default
   - TransparentFX

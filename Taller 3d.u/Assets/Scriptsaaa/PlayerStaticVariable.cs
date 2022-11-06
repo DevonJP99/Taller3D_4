@@ -17,7 +17,7 @@ public class PlayerStaticVariable : MonoBehaviour
     public TextMeshProUGUI Espacio;
     public TextMeshProUGUI health;
     public TextMeshProUGUI puntoMembres;
-    public bool Golpeado;
+    
 
     public bool interactuable=false;
     void Start()

@@ -5,13 +5,14 @@ using UnityEngine;
 public class Recibir2 : MonoBehaviour
 {
     PlayerStaticVariable compras;
+    public string Name;
     private void Awake()
     {
-        compras = GameObject.Find("Player").GetComponent<PlayerStaticVariable>();
+        compras = GameObject.Find(Name).GetComponent<PlayerStaticVariable>();
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag(Name))
         {
             compras.compras = 0;
             MejorasStatic.coins = MejorasStatic.coins + compras.puntoMembresia;

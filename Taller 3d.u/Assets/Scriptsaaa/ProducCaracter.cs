@@ -6,6 +6,7 @@ public class ProducCaracter : MonoBehaviour
 {
     public PlayerStaticVariable compras;
     public int size;
+    public string Name;
     public int price;
     public int descuento;
     public int puntaje;
@@ -15,13 +16,15 @@ public class ProducCaracter : MonoBehaviour
     public int a = 1;
     public bool maldito = false;
     public int b;
+    public int MaxDescuento;
+    public int MinDescuento;
 
 
     // Start is called before the first frame update
     private void Awake()
     {
-        compras = GameObject.Find("Player").GetComponent<PlayerStaticVariable>();
-        descuento = Random.Range(1, 11) * 10;
+        compras = GameObject.Find(Name).GetComponent<PlayerStaticVariable>();
+        descuento = Random.Range(MinDescuento, MaxDescuento) * 10;
         Puntos();
         b = Random.Range(1,10);
     }
@@ -52,7 +55,7 @@ public class ProducCaracter : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag(Name))
         {
             interactuable = true;
         }
@@ -60,7 +63,7 @@ public class ProducCaracter : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == Name)
         {
             interactuable = false;
         }

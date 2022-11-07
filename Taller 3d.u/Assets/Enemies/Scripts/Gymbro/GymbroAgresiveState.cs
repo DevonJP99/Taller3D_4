@@ -21,11 +21,12 @@ public class GymbroAgresiveState : GymbroBaseState
     {
         delta = 0;
         _manager = manager;
+        atacando = false;
     }
 
     public override void TriggerEnter(GymbroStateManager manager, Collider collider)
     {
-        if (collider.gameObject.CompareTag("Player"))
+        if (collider.gameObject.CompareTag("Player") && !atacando)
         {
             Player playa = collider.gameObject.GetComponent<Player>();
             playerDetected = playa;
@@ -48,6 +49,7 @@ public class GymbroAgresiveState : GymbroBaseState
             }
             Debug.Log(delta);
         }
+        Debug.DrawRay(head.position, head.forward, Color.black);
     }
 
     private void OnTriggerExit(Collider other)
@@ -63,12 +65,17 @@ public class GymbroAgresiveState : GymbroBaseState
     public void Embestir()
     {
         RaycastHit hit;
+        
         Debug.Log(head.position);
         Debug.Log(playerDetected.tag);
-        Debug.DrawRay(head.position, playerDetected.transform.position - head.position, Color.black,1000);
-        if (Physics.Raycast(head.position, playerDetected.transform.position - head.position,out hit,100,3))
+        Debug.DrawRay(head.position + new Vector3(-.5f, -.5f,0), head.forward, Color.black,1000);
+        Debug.DrawRay(head.position + new Vector3(.5f, -.5f,0), head.forward, Color.black,1000);
+        Debug.DrawRay(head.position + new Vector3(-.5f, .5f,0), head.forward, Color.black,1000);
+        Debug.DrawRay(head.position + new Vector3(.5f, .5f,0), head.forward, Color.black,1000);
+        if (Physics.BoxCast(head.position, Vector3.one,transform.forward,out hit,Quaternion.identity,100,3,QueryTriggerInteraction.Ignore))
         {
             Debug.Log(hit.collider);
+           
         }
         playerDetected = null;
     }

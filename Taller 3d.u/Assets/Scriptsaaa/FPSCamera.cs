@@ -35,7 +35,7 @@ public class FPSCamera : MonoBehaviour
                 CameraSwitcher.SwitchCamera(FpsPersonCam);
             }else if(CameraSwitcher.IsActiveCamera(FpsPersonCam))
             {
-                CameraSwitcher.SwitchCamera(FpsPersonCam); 
+                CameraSwitcher.SwitchCamera(thirdPersonCam); 
             }
         }
     }

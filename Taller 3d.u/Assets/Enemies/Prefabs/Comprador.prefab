@@ -108,6 +108,7 @@ GameObject:
   - component: {fileID: 968908378633694952}
   - component: {fileID: 5446166569179371069}
   - component: {fileID: 4494542751624311808}
+  - component: {fileID: 1701585666584725616}
   - component: {fileID: 5490143882639271345}
   - component: {fileID: 4478925092547498756}
   m_Layer: 8
@@ -181,6 +182,18 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &1701585666584725616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5446166569179371010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23dc371a57b7f0349a3585a1f01ff6f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!54 &5490143882639271345
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -210,6 +223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 100
+  playerDetected: {fileID: 0}
   OnReceiveDamage:
     m_PersistentCalls:
       m_Calls: []

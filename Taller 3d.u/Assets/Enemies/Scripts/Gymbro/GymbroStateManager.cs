@@ -22,6 +22,7 @@ public class GymbroStateManager : EnemyBase
         agent = GetComponent<NavMeshAgent>();
         pasive = GetComponent<GymbroPasiveState>();
         agresive = GetComponent<GymbroAgresiveState>();
+        embestida = GetComponent<GymbroEmbestirState>();
         current = pasive;
         current.EnterState(this);
     }

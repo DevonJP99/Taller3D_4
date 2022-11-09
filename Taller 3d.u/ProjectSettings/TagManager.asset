@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Objetos
   - Cart Controller
+  - Ground
   layers:
   - Default
   - TransparentFX

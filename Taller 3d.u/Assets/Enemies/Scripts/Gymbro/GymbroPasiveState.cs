@@ -18,29 +18,25 @@ public class GymbroPasiveState : GymbroBaseState
 
     public override void CollisionEnter(GymbroStateManager manager, Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.GetComponent<PlayerStaticVariable>())
         {
             manager.playerDetected =  collision.gameObject.GetComponent<PlayerStaticVariable>();
             manager.SwitchState(manager.agresive);
         }
         else
         {
-            if (collision.gameObject.isStatic)
-            {
-                Vector3 aux = collision.GetContact(0).normal;
-                aux.y = 0;
-                aux.Normalize();
-                direction = aux;
-                Debug.Log(direction);
-            }
-
+            Vector3 aux = collision.GetContact(0).normal;
+            aux.y = 0;
+            aux.Normalize();
+            direction = aux;
+            Debug.Log(direction);
         }
 
     }
 
     public override void TriggerEnter(GymbroStateManager manager, Collider collider)
     {
-        if (collider.CompareTag("Player"))
+        if (collider.gameObject.GetComponent<PlayerStaticVariable>())
         {
             manager.playerDetected = collider.GetComponent<PlayerStaticVariable>();
             manager.SwitchState(manager.agresive);

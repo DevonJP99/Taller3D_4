@@ -23,12 +23,12 @@ public class GymbroAgresiveState : GymbroBaseState
     public override void TriggerEnter(GymbroStateManager manager, Collider collider)
     {
         //if (collider.gameObject.CompareTag("Player") && !atacando)
-        if (collider.gameObject.CompareTag("Player"))
+        /*if (collider.gameObject.CompareTag("Player"))
         {
             manager.playerDetected = collider.gameObject.GetComponent<PlayerStaticVariable>();
             head.transform.LookAt(manager.playerDetected.transform);
             transform.LookAt(manager.playerDetected.transform);
-        }
+        }*/
     }
 
     public override void UpdateState(GymbroStateManager manager)
@@ -41,18 +41,18 @@ public class GymbroAgresiveState : GymbroBaseState
             }
             else
             {
-                delta = 0;
                 manager.SwitchState(manager.embestida);
+                delta = 0;
             }
             head.transform.LookAt(manager.playerDetected.transform);
+            transform.LookAt(manager.playerDetected.transform);
             Debug.Log(delta);
         }
-        Debug.DrawRay(head.position, head.forward, Color.black);
     }
 
     public override void TriggerExit(GymbroStateManager manager, Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (manager.playerDetected.gameObject == other.gameObject)
         {
             manager.playerDetected = null;
             manager.SwitchState(manager.pasive);

@@ -8,7 +8,7 @@ public class EnemyCompradorStatePasive : EnemyBaseState
     Transform[] pointsToGo;
     int pointIndex = 0;
     float pasiveSpeed = 10;
-
+    string name_player_tag = "Cart Controller";
     
     float maxCooldown = 5, minCooldown = 1;
     float cooldown = 5;
@@ -74,7 +74,7 @@ public class EnemyCompradorStatePasive : EnemyBaseState
 
     public override void OnCollisionEnter(EnemyStateManager manager, Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag(name_player_tag))
         {
             Transform playa = collision.transform;
             manager.agresive.playerDetected = playa;
@@ -85,17 +85,18 @@ public class EnemyCompradorStatePasive : EnemyBaseState
 
     public override void OnTriggerEnter(EnemyStateManager manager, Collider collider)
     {
-        if (collider.gameObject.CompareTag("Player"))
+        if (collider.gameObject.CompareTag(name_player_tag))
         {
             PlayerStaticVariable playa = collider.gameObject.GetComponent<PlayerStaticVariable>();
-            float aux = playa.PercentComprasFilled();
-            if (Random.value < aux || aux == 1)
-            {
-                //Debug.Log(playa.espacioCarrito);
-                manager.agresive.playerDetected = playa.transform;
-                Debug.Log("HEY TE ENCONTREE");
-                manager.SwitchState(manager.agresive);
-            }
+            //float aux = playa.PercentComprasFilled();
+            //if (Random.value < aux || aux == 1)
+            //{
+               
+            //}
+            //Debug.Log(playa.espacioCarrito);
+            manager.agresive.playerDetected = playa.transform;
+            Debug.Log("HEY TE ENCONTREE");
+            manager.SwitchState(manager.agresive);
         }
     }
 }

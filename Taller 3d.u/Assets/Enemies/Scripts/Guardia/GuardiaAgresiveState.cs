@@ -4,40 +4,35 @@ using UnityEngine;
 
 public class GuardiaAgresiveState : GuardiaBaseState
 {
-    public  Player playerDetected;
     float agresivespeed;
 
     public override void CollisionEnter(GuardiaStateManager manager, Collision collision)
     {
-        //throw new System.NotImplementedException();
     }
 
     public override void EnterState(GuardiaStateManager manager)
     {
         manager.GetNavMeshAgent().speed = agresivespeed;
-        manager.GetNavMeshAgent().SetDestination(playerDetected.transform.position);
-        //throw new System.NotImplementedException();
+        manager.GetNavMeshAgent().SetDestination(manager.playerDetected.transform.position);
     }
 
     public override void TriggerEnter(GuardiaStateManager manager, Collider collider)
     {
-        //throw new System.NotImplementedException();
     }
 
     public override void UpdateState(GuardiaStateManager manager)
     {
-        if (playerDetected)
+        if (manager.playerDetected)
         {
-            manager.GetNavMeshAgent().SetDestination(playerDetected.transform.position);
+            manager.GetNavMeshAgent().SetDestination(manager.playerDetected.transform.position);
         }
-        //throw new System.NotImplementedException();
     }
 
-    private void OnTriggerExit(Collider other)
+    public override void TriggerExit(GuardiaStateManager manager, Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            playerDetected = null;
+            manager.playerDetected = null;
             GetComponent<GuardiaStateManager>().SwitchState(GetComponent<GuardiaStateManager>().pasive);
         }
     }

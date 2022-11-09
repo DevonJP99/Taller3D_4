@@ -10,6 +10,7 @@ public class GymbroStateManager : EnemyBase
 
     public GymbroPasiveState pasive;
     public GymbroAgresiveState agresive;
+    public GymbroEmbestirState embestida;
 
     public NavMeshAgent GetNavMeshAgent()
     {

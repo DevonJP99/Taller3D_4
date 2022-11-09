@@ -9,6 +9,7 @@ public abstract class GymbroBaseState : MonoBehaviour
     public abstract void CollisionEnter(GymbroStateManager manager, Collision collision);
 
     public abstract void TriggerEnter(GymbroStateManager manager, Collider collider);
+    public abstract void TriggerExit(GymbroStateManager manager, Collider collider);
 
     public abstract void UpdateState(GymbroStateManager manager);
 }

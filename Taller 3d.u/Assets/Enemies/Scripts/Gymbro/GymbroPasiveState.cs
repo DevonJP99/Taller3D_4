@@ -13,14 +13,14 @@ public class GymbroPasiveState : GymbroBaseState
         Vector2 ww = Random.insideUnitCircle;
         direction = new Vector3(ww.x, 0, ww.y);
         manager.GetNavMeshAgent().SetDestination(transform.position + direction);
-        Debug.Log(direction);
+        //Debug.Log(direction);
     }
 
     public override void CollisionEnter(GymbroStateManager manager, Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Player playa = collision.gameObject.GetComponent<Player>();
+            manager.playerDetected =  collision.gameObject.GetComponent<PlayerStaticVariable>();
             manager.SwitchState(manager.agresive);
         }
         else
@@ -33,7 +33,7 @@ public class GymbroPasiveState : GymbroBaseState
                 direction = aux;
                 Debug.Log(direction);
             }
-            
+
         }
 
     }
@@ -42,21 +42,17 @@ public class GymbroPasiveState : GymbroBaseState
     {
         if (collider.CompareTag("Player"))
         {
-            Player playa = collider.GetComponent<Player>();
-            manager.agresive.playerDetected = playa;
+            manager.playerDetected = collider.GetComponent<PlayerStaticVariable>();
             manager.SwitchState(manager.agresive);
         }
     }
 
     public override void UpdateState(GymbroStateManager manager)
     {
-
         manager.GetNavMeshAgent().SetDestination(transform.position + direction);
     }
-
-    private void OnTriggerExit(Collider other)
+    public override void TriggerExit(GymbroStateManager manager, Collider collider)
     {
        
     }
-
 }

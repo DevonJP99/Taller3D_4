@@ -11,7 +11,7 @@ public class EnemyCompradorStateAgresive : EnemyBaseAgresiveState
     //Attack
     int damage = 1;
     float deltaCooldown, atackCooldown = 3f;
-    float rangeAtack = 1.5f;
+    float rangeAtack = 5f;
 
     public override void EnterState(EnemyStateManager manager)
     {
@@ -22,11 +22,11 @@ public class EnemyCompradorStateAgresive : EnemyBaseAgresiveState
 
     public override void OnCollisionEnter(EnemyStateManager manager, Collision collision)
     {
-        /*if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             manager.GetNavMeshAgent().SetDestination(playerDetected.transform.position);
-            playerDetected = collision.gameObject.GetComponent<Player>();
-        }*/
+            playerDetected = collision.gameObject.GetComponent<PlayerStaticVariable>().transform;
+        }
     }
 
     public override void OnTriggerEnter(EnemyStateManager manager, Collider collider)
@@ -79,6 +79,5 @@ public class EnemyCompradorStateAgresive : EnemyBaseAgresiveState
             deltaCooldown = atackCooldown;
             Debug.Log(playerDetected.GetComponent<PlayerStaticVariable>().vida);
         }
-
     }
 }

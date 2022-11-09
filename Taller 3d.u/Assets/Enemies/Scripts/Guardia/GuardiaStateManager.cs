@@ -45,4 +45,9 @@ public class GuardiaStateManager : EnemyBase
     {
         current.TriggerEnter(this, other);
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        current.TriggerExit(this, other);
+    }
 }

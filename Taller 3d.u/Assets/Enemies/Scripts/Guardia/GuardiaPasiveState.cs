@@ -53,11 +53,7 @@ public class GuardiaPasiveState : GuardiaBaseState
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Enemy"))
-        {
-            EnemyBase enem = other.GetComponent<EnemyBase>();
-            enem.OnReceiveDamage.RemoveListener(this.SwitchingState);
-        }
+        
     }
 
     private void OnTriggerStay(Collider other)
@@ -70,11 +66,20 @@ public class GuardiaPasiveState : GuardiaBaseState
         }
     }
 
-    void SwitchingState(int damage, Player player)
+    void SwitchingState(int damage, PlayerStaticVariable player)
     {
         GuardiaStateManager man = GetComponent<GuardiaStateManager>();
-        man.agresive.playerDetected = player;
+        man.playerDetected = player;
         man.SwitchState(man.agresive);
         man.OnReceiveDamage.RemoveListener(SwitchingState);
+    }
+
+    public override void TriggerExit(GuardiaStateManager manager, Collider collider)
+    {
+        if (collider.CompareTag("Enemy"))
+        {
+            EnemyBase enem = collider.GetComponent<EnemyBase>();
+            enem.OnReceiveDamage.RemoveListener(this.SwitchingState);
+        }
     }
 }

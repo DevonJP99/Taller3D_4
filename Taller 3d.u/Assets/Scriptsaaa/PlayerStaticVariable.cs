@@ -55,7 +55,7 @@ public class PlayerStaticVariable : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
 
-            compras = compras - 1;
+            compras = compras > 0 ? compras - 1 : 0;
         }
        
     }

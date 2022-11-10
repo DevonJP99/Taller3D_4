@@ -77,7 +77,7 @@ public class EnemyCompradorStateAgresive : EnemyBaseAgresiveState
         {
             playerDetected.GetComponent<PlayerStaticVariable>().vida -= damage;
             deltaCooldown = atackCooldown;
-            Debug.Log(playerDetected.GetComponent<PlayerStaticVariable>().vida);
+            //Debug.Log(playerDetected.GetComponent<PlayerStaticVariable>().vida);
         }
     }
 }

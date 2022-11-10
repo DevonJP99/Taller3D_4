@@ -28,7 +28,7 @@ public class FPSCamera : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetMouseButtonDown(1))
         {
             if(CameraSwitcher.IsActiveCamera(thirdPersonCam))
             {

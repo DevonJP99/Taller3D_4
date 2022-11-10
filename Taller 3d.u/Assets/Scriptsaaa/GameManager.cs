@@ -15,10 +15,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        if(MejorasStatic.mejorasDesbloqueadas[0])
-        {
-            cañonAmmo = 15;
-        }
+       
     }
 
    

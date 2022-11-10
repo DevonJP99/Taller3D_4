@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1257393452548255417}
   - component: {fileID: 3061083801330323499}
   - component: {fileID: 3873493024211183301}
-  - component: {fileID: 8627834640545550704}
   m_Layer: 8
   m_Name: visor
   m_TagString: Untagged
@@ -82,20 +81,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &8627834640545550704
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2097186949232783674}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!1 &5446166569179371010
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,10 +163,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
+  m_Radius: 1
+  m_Height: 4.2367916
   m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0, y: 2.6183958, z: 0}
 --- !u!114 &1701585666584725616
 MonoBehaviour:
   m_ObjectHideFlags: 0

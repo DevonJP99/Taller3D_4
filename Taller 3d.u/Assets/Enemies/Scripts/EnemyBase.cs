@@ -5,8 +5,6 @@ using UnityEngine.Events;
 
 public class EnemyBase : MonoBehaviour
 {
-
-
     [SerializeField]
     int life = 100;
     float speed = 10;
@@ -19,5 +17,10 @@ public class EnemyBase : MonoBehaviour
     {
         OnReceiveDamage?.Invoke(damage_received, player);
         life -= damage_received;
+        Debug.Log(life);
+        if (life <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }

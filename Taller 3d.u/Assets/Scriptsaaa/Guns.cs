@@ -62,20 +62,23 @@ public class Guns : MonoBehaviour
         //Calculate Direction with spread
         Vector3 direction = fpcCam.transform.forward + new Vector3(x, y, 0);
        //Raycast
-        if(Physics.Raycast(fpcCam.transform.position,direction,out rayHit, range,whatIsEnemy ))
+        if(Physics.Raycast(fpcCam.transform.position,direction,out rayHit, range,whatIsEnemy,QueryTriggerInteraction.Ignore))
         {
-            Debug.Log(rayHit.collider.name);
+            //Debug.Log(rayHit.collider.name);
             if(rayHit.collider.CompareTag("Enemy"))
             {
-                rayHit.collider.GetComponent<EnemyStats>().TakeDamage(damage);
+                rayHit.collider.GetComponent<EnemyBase>().ReceiveDamage(damage);
+                Debug.Log(rayHit.collider.name);
             }
         }
         //ShakeCamera
         camShake.Shake(camShakeDuration,camShakeMagnitude );
         //Graphics
         
-        Instantiate(bulletHoleGraphic, rayHit.point, Quaternion.Euler(0, 180, 0));
+        GameObject hole_aux = Instantiate(bulletHoleGraphic, rayHit.point, Quaternion.identity);
+        hole_aux.transform.forward = rayHit.normal;
         Instantiate(muzzleFlash, attacPoint.position, Quaternion.identity);
+
 
 
         bulletsLeft--;

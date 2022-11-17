@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CompulsivoAgresiveState : CompulsivoBaseState
+public class CompulsivoAgresiveState : EnemyBaseState 
 {
     //follow
     float agresiveSpeed = 17;
@@ -12,50 +12,50 @@ public class CompulsivoAgresiveState : CompulsivoBaseState
     float deltaCooldown, atackCooldown = 3f;
     float rangeAtack = 1.5f;
 
-    public PlayerStaticVariable playerDetected;
+    //public PlayerStaticVariable playerDetected;
 
-    public override void EnterState(CompulsivoStateManager manager)
+    public override void EnterState(EnemyBaseStateMachine manager)
     {
-        manager.GetNavMeshAgent().SetDestination(playerDetected.transform.position);
+        manager.GetNavMeshAgent().SetDestination(manager.playerDetected.transform.position);
         manager.GetNavMeshAgent().speed = agresiveSpeed;
     }
 
-    public override void CollisionEnter(CompulsivoStateManager manager, Collision collision)
+    public override void CollisionEnter(EnemyBaseStateMachine manager, Collision collision)
     {
         //throw new System.NotImplementedException();
     }
 
-    public override void TriggerEnter(CompulsivoStateManager manager, Collider collider)
+    public override void TriggerEnter(EnemyBaseStateMachine manager, Collider collider)
     {
-        if (collider.CompareTag("Player"))
+        if (collider.CompareTag(manager.name_player_tag))
         {
-            playerDetected = collider.GetComponent<PlayerStaticVariable>();
-            manager.GetNavMeshAgent().SetDestination(playerDetected.transform.position);
+            manager.playerDetected = collider.GetComponent<PlayerStaticVariable>();
+            manager.GetNavMeshAgent().SetDestination(manager.playerDetected.transform.position);
         }
     }
 
-    public override void UpdateState(CompulsivoStateManager manager)
+    public override void UpdateState(EnemyBaseStateMachine manager)
     {
-        if (playerDetected)
+        if (manager.playerDetected)
         {
-            manager.GetNavMeshAgent().SetDestination(playerDetected.transform.position);
-            if (Vector3.Distance(manager.transform.position, playerDetected.transform.position) < rangeAtack)
+            manager.GetNavMeshAgent().SetDestination(manager.playerDetected.transform.position);
+            if (Vector3.Distance(manager.transform.position, manager.playerDetected.transform.position) < rangeAtack)
             {
                 Atack();
             }
         }
         
-        if (Vector3.Distance(manager.transform.position, manager.GetNavMeshAgent().transform.position) < .1f && !playerDetected)
+        if (Vector3.Distance(manager.transform.position, manager.GetNavMeshAgent().transform.position) < .1f && !manager.playerDetected)
         {
             manager.SwitchState(manager.pasive);
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    public override void TriggerExit(EnemyBaseStateMachine manager,Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag(manager.name_player_tag))
         {
-            playerDetected = null;
+            manager.playerDetected = null;
         }
     }
 
@@ -63,9 +63,9 @@ public class CompulsivoAgresiveState : CompulsivoBaseState
     {
         if (deltaCooldown < 0)
         {
-            playerDetected.vida -= damage;
+            GetComponent<EnemyBaseStateMachine>().playerDetected.vida -= damage;
             deltaCooldown = atackCooldown;
-            Debug.Log(playerDetected.vida);
+            Debug.Log(GetComponent<EnemyBaseStateMachine>().playerDetected.vida);
         }
     }
 }

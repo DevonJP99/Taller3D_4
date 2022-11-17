@@ -5,6 +5,8 @@ using TMPro;
 
 public class Guns : MonoBehaviour
 {
+    [SerializeField]
+    PlayerStaticVariable owner;
     public int damage;
     public float timeBetweenShooting, spread, range, reloadTime, timeBetweenShots;
     public int magazineSize, bulletsPerTap;
@@ -67,7 +69,7 @@ public class Guns : MonoBehaviour
             //Debug.Log(rayHit.collider.name);
             if(rayHit.collider.CompareTag("Enemy"))
             {
-                rayHit.collider.GetComponent<EnemyBase>().ReceiveDamage(damage);
+                rayHit.collider.GetComponent<EnemyBase>().ReceiveDamage(damage,owner);
                 Debug.Log(rayHit.collider.name);
             }
         }

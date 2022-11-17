@@ -10,7 +10,7 @@ public class EnemyStateWithObject : EnemyBaseState
     Vector3 direction;
     float deltacooldown;
 
-    public override void EnterState(EnemyStateManager manager)
+    public override void EnterState(EnemyBaseStateMachine manager)
     {
         deltacooldown = beforeDetroyObject;
         direction = manager.transform.position - _object.transform.position;
@@ -20,12 +20,12 @@ public class EnemyStateWithObject : EnemyBaseState
         manager.GetNavMeshAgent().speed = speedHurry;
     }
 
-    public override void OnCollisionEnter(EnemyStateManager manager, Collision collision)
+    public override void CollisionEnter(EnemyBaseStateMachine manager, Collision collision)
     {
 
     }
 
-    public override void OnTriggerEnter(EnemyStateManager manager, Collider collider)
+    public override void TriggerEnter(EnemyBaseStateMachine manager, Collider collider)
     {
         if (collider.CompareTag("Player"))
         {
@@ -36,7 +36,7 @@ public class EnemyStateWithObject : EnemyBaseState
         }
     }
 
-    public override void UpdateState(EnemyStateManager manager)
+    public override void UpdateState(EnemyBaseStateMachine manager)
     {
         if (deltacooldown > 0)
         {
@@ -45,13 +45,19 @@ public class EnemyStateWithObject : EnemyBaseState
         }
     }
 
-    public override void OnReceieveDamage(EnemyStateManager manager)
+    public override void TriggerExit(EnemyBaseStateMachine manager, Collider collider)
     {
-        base.OnReceieveDamage(manager);
-        _object.transform.position = manager.transform.position;
-        direction.y = 1;
-        direction.z *= -1;
-        direction.x *= -1;
-        _object.GetComponent<Rigidbody>().AddForce(direction.normalized, ForceMode.VelocityChange);
+        //throw new System.NotImplementedException();
     }
+
+    /*
+public override void OnReceieveDamage(EnemyBaseStateMachine manager)
+{
+   base.OnReceieveDamage(manager);
+   _object.transform.position = manager.transform.position;
+   direction.y = 1;
+   direction.z *= -1;
+   direction.x *= -1;
+   _object.GetComponent<Rigidbody>().AddForce(direction.normalized, ForceMode.VelocityChange);
+}*/
 }

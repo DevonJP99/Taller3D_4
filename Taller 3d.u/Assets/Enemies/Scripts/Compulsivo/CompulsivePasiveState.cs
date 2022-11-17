@@ -2,50 +2,54 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CompulsivePasiveState : CompulsivoBaseState
+public class CompulsivePasiveState : EnemyBaseState
 {
     [SerializeField]
     Transform position;
     float speedPassive = 10;
-    CompulsivoStateManager man;
-    public override void EnterState(CompulsivoStateManager manager)
+
+    public override void EnterState(EnemyBaseStateMachine manager)
     {
         manager.GetNavMeshAgent().speed = speedPassive;
         manager.GetNavMeshAgent().SetDestination(position.position);
-        man = manager;
     }
 
-    public override void CollisionEnter(CompulsivoStateManager manager, Collision collision)
+    public override void CollisionEnter(EnemyBaseStateMachine manager, Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag(manager.name_player_tag))
         {
             PlayerStaticVariable playa = collision.gameObject.GetComponent<PlayerStaticVariable>();
-            manager.agresive.playerDetected = playa;
+            manager.playerDetected = playa;
             manager.SwitchState(manager.agresive);
         }
     }
 
     public void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Player"))
+        EnemyBaseStateMachine manager = GetComponent<EnemyBaseStateMachine>();
+        if (other.CompareTag(manager.name_player_tag))
         {
             PlayerStaticVariable playa = other.GetComponent<PlayerStaticVariable>();
             Debug.Log(playa.PercentComprasFilled());
             if (playa.PercentComprasFilled() >= .5f)
             {
-                man.agresive.playerDetected = playa;
-                man.SwitchState(man.agresive);
+                manager.playerDetected = playa;
+                manager.SwitchState(manager.agresive);
             }
         }
     }
 
-    public override void UpdateState(CompulsivoStateManager manager)
+    public override void UpdateState(EnemyBaseStateMachine manager)
     {
         //iddle animation
     }
 
-    public override void TriggerEnter(CompulsivoStateManager manager, Collider collider)
+    public override void TriggerEnter(EnemyBaseStateMachine manager, Collider collider)
     {
 
+    }
+
+    public override void TriggerExit(EnemyBaseStateMachine manager, Collider collider)
+    {
     }
 }

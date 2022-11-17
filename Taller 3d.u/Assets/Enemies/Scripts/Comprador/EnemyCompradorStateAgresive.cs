@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyCompradorStateAgresive : EnemyBaseAgresiveState
+public class EnemyCompradorStateAgresive : EnemyBaseState
 {
     //follow
     float agresiveSpeed = 17;
@@ -13,52 +13,51 @@ public class EnemyCompradorStateAgresive : EnemyBaseAgresiveState
     float deltaCooldown, atackCooldown = 3f;
     float rangeAtack = 5f;
 
-    public override void EnterState(EnemyStateManager manager)
+    public override void EnterState(EnemyBaseStateMachine manager)
     {
-        manager.GetNavMeshAgent().SetDestination(playerDetected.transform.position);
+        manager.GetNavMeshAgent().SetDestination(manager.playerDetected.transform.position);
         manager.GetNavMeshAgent().speed = agresiveSpeed;
         //Debug.Log(manager.GetNavMeshAgent().speed);
     }
 
-    public override void OnCollisionEnter(EnemyStateManager manager, Collision collision)
+    public override void CollisionEnter(EnemyBaseStateMachine manager, Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag(manager.name_player_tag))
         {
-            manager.GetNavMeshAgent().SetDestination(playerDetected.transform.position);
-            playerDetected = collision.gameObject.GetComponent<PlayerStaticVariable>().transform;
+            manager.GetNavMeshAgent().SetDestination(manager.playerDetected.transform.position);
+            manager.playerDetected = collision.gameObject.GetComponent<PlayerStaticVariable>();
         }
     }
 
-    public override void OnTriggerEnter(EnemyStateManager manager, Collider collider)
+    public override void TriggerEnter(EnemyBaseStateMachine manager, Collider collider)
     {
-        /*if (collider.CompareTag("MeoObjecto"))
+        
+        if (collider.CompareTag(manager.name_player_tag))
         {
-            manager.GetNavMeshAgent().SetDestination(playerDetected.transform.position);
-            playerDetected = null;
-            manager.head.transform.localRotation = Quaternion.identity;
-            manager.SwitchState(manager.pasive);
-        }*/
-        if (collider.CompareTag("Player"))
-        {
-            playerDetected = collider.transform;
-            manager.GetNavMeshAgent().SetDestination(playerDetected.transform.position);
+            manager.playerDetected = collider.GetComponent<PlayerStaticVariable>();
+            manager.GetNavMeshAgent().SetDestination(manager.playerDetected.transform.position);
         }
 
     }
 
-    public override void UpdateState(EnemyStateManager manager)
+    public override void TriggerExit(EnemyBaseStateMachine manager, Collider collider)
+    {
+        //throw new NotImplementedException();
+    }
+
+    public override void UpdateState(EnemyBaseStateMachine manager)
     {
         //llego  a su destino?
-        if (Vector3.Distance(manager.transform.position, playerDetected.transform.position) < rangeAtack)
+        if (Vector3.Distance(manager.transform.position, manager.playerDetected.transform.position) < rangeAtack)
         {
-            Atack();
-            manager.GetNavMeshAgent().SetDestination(playerDetected.transform.position);
+            Atack(manager.playerDetected);
+            manager.GetNavMeshAgent().SetDestination(manager.playerDetected.transform.position);
         }
         else if (Vector3.Distance(manager.transform.position, manager.GetNavMeshAgent().destination) < 0.35f)
         {
             Debug.Log("Me rindo quiero productos");
-            playerDetected = null;
-            manager.head.transform.localRotation = Quaternion.identity;
+            manager.playerDetected = null;
+            //manager.head.transform.localRotation = Quaternion.identity;
             manager.SwitchState(manager.pasive);
         }
 
@@ -68,14 +67,14 @@ public class EnemyCompradorStateAgresive : EnemyBaseAgresiveState
             deltaCooldown -= Time.deltaTime;
         }
 
-        if (playerDetected) manager.head.transform.LookAt(manager.GetNavMeshAgent().destination);
+        //if (manager.playerDetected) manager.head.transform.LookAt(manager.GetNavMeshAgent().destination);
     }
 
-    private void Atack()
+    private void Atack(PlayerStaticVariable play)
     {
         if (deltaCooldown < 0)
         {
-            playerDetected.GetComponent<PlayerStaticVariable>().vida -= damage;
+            play.vida -= damage;
             deltaCooldown = atackCooldown;
             //Debug.Log(playerDetected.GetComponent<PlayerStaticVariable>().vida);
         }

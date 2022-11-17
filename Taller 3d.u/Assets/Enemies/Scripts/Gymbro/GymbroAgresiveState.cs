@@ -2,25 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GymbroAgresiveState : GymbroBaseState
+public class GymbroAgresiveState : EnemyBaseState
 {
     public Transform head;
     float tiempoMaximo = 3;
     float delta = 0;
 
-    public override void CollisionEnter(GymbroStateManager manager, Collision collision)
+    public override void CollisionEnter(EnemyBaseStateMachine manager, Collision collision)
     {
 
     }
 
-    public override void EnterState(GymbroStateManager manager)
+    public override void EnterState(EnemyBaseStateMachine manager)
     {
         //delta = 0;
         //_manager = manager;
         //atacando = false;
     }
 
-    public override void TriggerEnter(GymbroStateManager manager, Collider collider)
+    public override void TriggerEnter(EnemyBaseStateMachine manager, Collider collider)
     {
         //if (collider.gameObject.CompareTag("Player") && !atacando)
         /*if (collider.gameObject.CompareTag("Player"))
@@ -31,7 +31,7 @@ public class GymbroAgresiveState : GymbroBaseState
         }*/
     }
 
-    public override void UpdateState(GymbroStateManager manager)
+    public override void UpdateState(EnemyBaseStateMachine manager)
     {
         if (manager.playerDetected)
         {
@@ -41,7 +41,7 @@ public class GymbroAgresiveState : GymbroBaseState
             }
             else
             {
-                manager.SwitchState(manager.embestida);
+                manager.SwitchState(((GymbroStateManager)manager).embestida);
                 delta = 0;
             }
             head.transform.LookAt(manager.playerDetected.transform);
@@ -50,7 +50,7 @@ public class GymbroAgresiveState : GymbroBaseState
         }
     }
 
-    public override void TriggerExit(GymbroStateManager manager, Collider other)
+    public override void TriggerExit(EnemyBaseStateMachine manager, Collider other)
     {
         if (manager.playerDetected.gameObject == other.gameObject)
         {

@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GymbroPasiveState : GymbroBaseState
+public class GymbroPasiveState : EnemyBaseState
 {
     Vector3 direction;
     float speedPassive = 10;
 
-    public override void EnterState(GymbroStateManager manager)
+    public override void EnterState(EnemyBaseStateMachine manager)
     {
         manager.GetNavMeshAgent().speed = speedPassive;
         Vector2 ww = Random.insideUnitCircle;
@@ -16,7 +16,7 @@ public class GymbroPasiveState : GymbroBaseState
         //Debug.Log(direction);
     }
 
-    public override void CollisionEnter(GymbroStateManager manager, Collision collision)
+    public override void CollisionEnter(EnemyBaseStateMachine manager, Collision collision)
     {
         if (collision.gameObject.GetComponent<PlayerStaticVariable>())
         {
@@ -34,7 +34,7 @@ public class GymbroPasiveState : GymbroBaseState
 
     }
 
-    public override void TriggerEnter(GymbroStateManager manager, Collider collider)
+    public override void TriggerEnter(EnemyBaseStateMachine manager, Collider collider)
     {
         if (collider.gameObject.GetComponent<PlayerStaticVariable>())
         {
@@ -43,11 +43,11 @@ public class GymbroPasiveState : GymbroBaseState
         }
     }
 
-    public override void UpdateState(GymbroStateManager manager)
+    public override void UpdateState(EnemyBaseStateMachine manager)
     {
         manager.GetNavMeshAgent().SetDestination(transform.position + direction);
     }
-    public override void TriggerExit(GymbroStateManager manager, Collider collider)
+    public override void TriggerExit(EnemyBaseStateMachine manager, Collider collider)
     {
        
     }

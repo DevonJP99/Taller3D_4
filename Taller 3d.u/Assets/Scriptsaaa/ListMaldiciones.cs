@@ -1,14 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DavidJalbert;
 
 public class ListMaldiciones : MonoBehaviour
 {
     // Start is called before the first frame update
-    PlayerMovement move;
+    List<int> ID = new List<int>();
+    
     void Start()
     {
-        move = GameObject.Find("Player").GetComponent<PlayerMovement>();
+      
     }
 
     // Update is called once per frame
@@ -18,7 +20,7 @@ public class ListMaldiciones : MonoBehaviour
     }
     public void Pereza()
     {
-        move.ActualmoveSpeed = move.ActualmoveSpeed * 0.5f;
+    
 
     }
     public void lujuria()

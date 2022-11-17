@@ -9,7 +9,7 @@ public class Guns : MonoBehaviour
     PlayerStaticVariable owner;
     public int damage;
     public float timeBetweenShooting, spread, range, reloadTime, timeBetweenShots;
-    public int magazineSize, bulletsPerTap;
+    public int magazineSize, bulletsPerTap,a,b,c;
     public bool allowButtonHold;
     int bulletsLeft, bulletsShot;
 
@@ -29,6 +29,19 @@ public class Guns : MonoBehaviour
     {
         bulletsLeft = magazineSize;
         readyToShoot = true;
+
+       
+        if (MejorasStatic.mejorasDesbloqueadasGaranty[0])
+        {
+            magazineSize= magazineSize+a;
+        }else if (MejorasStatic.mejorasDesbloqueadasGaranty[1])
+        {
+            magazineSize = magazineSize + b-a;
+        }
+        else if (MejorasStatic.mejorasDesbloqueadasGaranty[2])
+        {
+            magazineSize = magazineSize +c- b - a;
+        }
     }
     private void Update()
     {

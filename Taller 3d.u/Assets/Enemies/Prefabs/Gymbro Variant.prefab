@@ -13,7 +13,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 1cf9cd30672fdcb4ebe95a97afbbcf07, type: 2}
     - target: {fileID: 968908378633694952, guid: 197befb7735c262459cc7dca91789cb7, type: 3}
       propertyPath: m_Radius
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2169861478060430795, guid: 197befb7735c262459cc7dca91789cb7, type: 3}
       propertyPath: m_Mesh

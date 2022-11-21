@@ -88,6 +88,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 968908378633694952, guid: 197befb7735c262459cc7dca91789cb7, type: 3}
+      propertyPath: m_Radius
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 4478925092547498756, guid: 197befb7735c262459cc7dca91789cb7, type: 3}
       propertyPath: pointsToGo.Array.size
       value: 4

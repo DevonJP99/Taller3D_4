@@ -34,6 +34,8 @@ public class GymbroEmbestirState : EnemyBaseState
     {
         manager.GetNavMeshAgent().SetDestination(transform.position + transform.forward.normalized * 5);
         manager.GetNavMeshAgent().speed = speedEmbestida;
+        manager.GetNavMeshAgent().acceleration = 20;
+
         Debug.Log("Embesteindo");
         Debug.Log("transform.forward");
     }

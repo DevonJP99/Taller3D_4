@@ -12,7 +12,7 @@ public class SceneManagement : MonoBehaviour
 
     public void loadOptions()
     {
-        SceneManager.LoadScene("Options");
+        SceneManager.LoadScene("Opciones");
     }
 
     public void loadLeaderBoard()

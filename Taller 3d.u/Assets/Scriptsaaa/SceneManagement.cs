@@ -7,7 +7,7 @@ public class SceneManagement : MonoBehaviour
 {
     public void loadgame()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Zona de Pruebas");
     }
 
     public void loadOptions()
@@ -17,11 +17,16 @@ public class SceneManagement : MonoBehaviour
 
     public void loadLeaderBoard()
     {
-        SceneManager.LoadScene("LeaderBoard");
+        SceneManager.LoadScene("Puntaje");
     }
     public void loadMarket()
     {
         SceneManager.LoadScene("Market");
+    }
+
+    public void loadcredits()
+    {
+        SceneManager.LoadScene("Creditos");
     }
 
     public void loadMenu()
@@ -37,4 +42,5 @@ public class SceneManagement : MonoBehaviour
     {
         MejorasStatic.coins = MejorasStatic.coins + 5;
     }
+
 }

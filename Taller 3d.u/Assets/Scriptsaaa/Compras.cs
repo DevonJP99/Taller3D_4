@@ -25,7 +25,7 @@ public class Compras : MonoBehaviour
     {
         MejorasStatic.ofertaslimitas = true;
         MejorasStatic.Si = true;
-        Ofertas.text = "Han empezado las ofertas limitadas";       
+        Ofertas.text = "OFERTAS INCIADAS";       
     }
 
     IEnumerator Sale()
@@ -33,10 +33,10 @@ public class Compras : MonoBehaviour
         yield return new WaitForSeconds(time);
         MejorasStatic.ofertaslimitas = true;
         MejorasStatic.Si = true;
-        Ofertas.text = "Han empezado las ofertas limitadas";
+        Ofertas.text = "OFERTAS INCIADAS";
 
         yield return new WaitForSeconds(timerepeat);
-        Ofertas.text = "Han terminado las ofertas limitadas ";
+        Ofertas.text = "OFERTAS TERMINADAS";
         MejorasStatic.ofertaslimitas = false;
         MejorasStatic.Si = false;
 

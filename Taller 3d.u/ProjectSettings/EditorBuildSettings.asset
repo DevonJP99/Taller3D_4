@@ -23,5 +23,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Opciones.unity
     guid: 5726cf1eb6ab86b4988d68a5d74f771f
+  - enabled: 1
+    path: Assets/Scenes/Salir.unity
+    guid: 86cc965c15735d848a811a17c0f2c5af
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 47860ecde7af3934e8ed2d3c291c9a8a, type: 2}

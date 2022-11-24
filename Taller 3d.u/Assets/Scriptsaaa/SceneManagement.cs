@@ -35,7 +35,8 @@ public class SceneManagement : MonoBehaviour
     }
     public void exit()
     {
-        Application.Quit();
+        SceneManager.LoadScene("Salir");
+      //  Application.Quit();
     }
 
     public void AumentarCoins()

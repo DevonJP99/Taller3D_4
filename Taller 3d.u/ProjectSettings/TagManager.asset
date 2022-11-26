@@ -10,6 +10,8 @@ TagManager:
   - Objetos
   - Cart Controller
   - Ground
+  - Gate
+  - Gun
   layers:
   - Default
   - TransparentFX

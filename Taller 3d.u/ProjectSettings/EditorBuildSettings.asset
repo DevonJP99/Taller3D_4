@@ -29,7 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tutorial.unity
     guid: 68cc3daadb327b146ade2558b8e84cee
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Zona de Pruebas.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects:

@@ -40,11 +40,10 @@ public class PlayerStaticVariable : MonoBehaviour
         Espacio.text = compras.ToString() + "/" + Maxcompras.ToString();
         health.text = vida.ToString();
         puntoMembres.text = MejorasStatic.coins.ToString();
-        MejorasStatic.totalP = MejorasStatic.totalP + cantiProc;
-        MejorasStatic.puntoT = MejorasStatic.puntoT + puntaje;
+      
+        puntajemasalto();
 
     }
-
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("Gun") && Input.GetKeyDown(KeyCode.E))

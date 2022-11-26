@@ -60,7 +60,7 @@ public class Guns : MonoBehaviour
         {
             shooting = Input.GetKeyDown(KeyCode.Mouse0);
         }
-        if (Input.GetKeyDown(KeyCode.R) && bulletsLeft < magazineSize && !reloading) Reload();
+        if (Input.GetKeyDown(KeyCode.R) && bulletsLeft < magazineSize && !reloading ) Reload();
         //Shoot
         if(readyToShoot && shooting && !reloading && bulletsLeft>0)
         {

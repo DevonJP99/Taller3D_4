@@ -21,7 +21,7 @@ public class cerrarvideo : MonoBehaviour
 
     void Update()
     {
-        
+        saltarcreditos();
     }
 
     void CheckOver (VideoPlayer vp)
@@ -38,5 +38,13 @@ public class cerrarvideo : MonoBehaviour
         }*/
         gameObject.SetActive(false);
         SceneManager.LoadScene("Menu");
+    }
+
+    void saltarcreditos()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("Menu");
+        }
     }
 }

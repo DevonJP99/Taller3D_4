@@ -44,6 +44,7 @@ public class ProducCaracter : MonoBehaviour
             compras.compras = compras.compras + size;
             rend.enabled = false;
             compras.puntaje = compras.puntaje + actualPunt;
+            AutoDestruccion();
         }
         if (compras.compras + size <= compras.Maxcompras && interactuable && Input.GetKeyDown(KeyCode.E) && MejorasStatic.ofertaslimitas == true)
         {
@@ -51,6 +52,7 @@ public class ProducCaracter : MonoBehaviour
             rend.enabled = false;
             compras.puntaje = compras.puntaje + actualPunt;
             compras.puntoMembresia = compras.puntoMembresia + 1;
+            AutoDestruccion();
         }
 
     }
@@ -95,5 +97,9 @@ public class ProducCaracter : MonoBehaviour
         {
             maldito = true;
         }
+    }
+    public void AutoDestruccion()
+    {
+        Destroy(gameObject);
     }
 }

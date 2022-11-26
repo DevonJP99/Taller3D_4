@@ -52,7 +52,7 @@ public class Guns : MonoBehaviour
 
     private void MyInput()
     {
-        if (allowButtonHold)
+        if (allowButtonHold && Time.timeScale != 0f)
         {
             shooting = Input.GetKey(KeyCode.Mouse0);
         }
@@ -99,7 +99,7 @@ public class Guns : MonoBehaviour
         bulletsLeft--;
         bulletsShot--;
         Invoke("ResetShot", timeBetweenShooting);
-        if (bulletsShot > 0 && bulletsLeft > 0)
+        if (bulletsShot > 0 && bulletsLeft > 0 && Time.timeScale != 0f)
         {
             Invoke("Shoot", timeBetweenShots);
         }

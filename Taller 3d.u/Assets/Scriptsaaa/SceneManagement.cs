@@ -47,5 +47,9 @@ public class SceneManagement : MonoBehaviour
     {
         MejorasStatic.coins = MejorasStatic.coins + 5;
     }
+    public void tuto()
+    {
+        SceneManager.LoadScene("Tutorial");
+    }
 
 }

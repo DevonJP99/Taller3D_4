@@ -26,6 +26,6 @@ public class Timer : MonoBehaviour
     }
     public void ScoreScene()
     {
-        SceneManager.LoadScene("LeaderBoard");
+        SceneManager.LoadScene("Puntaje");
     }
 }

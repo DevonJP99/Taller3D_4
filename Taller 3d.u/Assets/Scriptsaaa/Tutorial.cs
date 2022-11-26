@@ -32,7 +32,7 @@ public class Tutorial : MonoBehaviour
     }
     public void loadOptions()
     {
-        SceneManager.LoadScene("Zona de Pruebas");
+        SceneManager.LoadScene("copia-zonadepruebas");
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -41,5 +41,4 @@ public class Tutorial : MonoBehaviour
             loadOptions();
         }
     }
-
 }

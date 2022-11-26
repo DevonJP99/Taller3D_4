@@ -7,6 +7,7 @@ using TMPro;
 public class PlayerStaticVariable : MonoBehaviour
 {
     ProducCaracter producCarac;
+    public int cantiProc;
     public int compras;
     public int Maxcompras;
     public bool puedesComprar=true;
@@ -18,7 +19,7 @@ public class PlayerStaticVariable : MonoBehaviour
     public TextMeshProUGUI health;
     public TextMeshProUGUI puntoMembres;
     public int a;
-    
+    public bool Equipment;
 
     public bool interactuable=false;
     void Start()

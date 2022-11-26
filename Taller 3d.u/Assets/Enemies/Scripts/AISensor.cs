@@ -8,36 +8,17 @@ public class AISensor : MonoBehaviour
     public float angle = 10;
     public float height = 10;
     public Color meshColor = Color.black;
-    // Start is called before the first frame update
-    void Start()
+    public LayerMask layerMask;
+
+    public List<Collider> Scan()
     {
-        
+        //return Physics.OverlapSphereNonAlloc(transform.position,distance,,layer,QueryTriggerInteraction.Collide);
+        return new List<Collider>(Physics.OverlapSphere(transform.position,distance, layerMask, QueryTriggerInteraction.Collide));
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDrawGizmos()
     {
-        
+        Gizmos.color = meshColor;
+        Gizmos.DrawSphere(transform.position,distance);
     }
-
-    /*Mesh CreateMesh()
-    {
-        Mesh mesh = new Mesh();
-
-        int numTriangules = 8;
-        int numVertices = numTriangules * 3;
-
-        Vector3[] vertices = new Vector3[numVertices];
-        int[] triangules = new int[numVertices];
-
-        Vector3 bottomCenter = Vector3.zero;
-        Vector3 bottomLeft = Quaternion.Euler(0, -angle, 0) * Vector3.forward * distance;
-        Vector3 bottomRight = Quaternion.Euler(0, angle, 0) * Vector3.forward * distance;
-
-        Vector3 topCenter = bottomCenter + Vector3.up *height;
-        Vector3 topLeft =  bottomLeft + Vector3.up * height;
-        Vector3 topRight = bottomRight + Vector3.up * height;
-
-        int vert = 0;
-    }*/
 }

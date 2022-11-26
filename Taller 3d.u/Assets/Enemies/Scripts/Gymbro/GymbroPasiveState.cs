@@ -29,7 +29,7 @@ public class GymbroPasiveState : EnemyBaseState
             aux.y = 0;
             aux.Normalize();
             direction = aux;
-            Debug.Log(direction);
+            //Debug.Log(direction);
         }
 
     }

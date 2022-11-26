@@ -7,9 +7,8 @@ public class GuardiaPasiveState : EnemyBaseState
     [SerializeField]
     Transform position;
     float speedPassive = 10;
+    List<EnemyBaseStateMachine> enemyDetecteds;
     //float radius = 0;
-
-    //public List<GameObject> enemiesRegistred;
 
     public override void EnterState(EnemyBaseStateMachine manager)
     {
@@ -17,7 +16,7 @@ public class GuardiaPasiveState : EnemyBaseState
         //radius = GetComponent<SphereCollider>().radius;
         manager.GetNavMeshAgent().speed = speedPassive;
         manager.GetNavMeshAgent().SetDestination(position.position);
-        //manager.OnReceiveDamage.AddListener(SwitchingState);
+        manager.OnReceiveDamage.AddListener(SwitchingState);
         //Debug.Log(radius);
         //RaycastHit[] objects_ = Physics.SphereCastAll(transform.position, radius, Vector3.up, 0);
         //for (int i = 0; i < objects_.Length; i++)
@@ -41,34 +40,18 @@ public class GuardiaPasiveState : EnemyBaseState
     {
         if (collider.gameObject.CompareTag("Enemy"))
         {
-            Debug.Log("pito");
             EnemyBase enem = collider.GetComponent<EnemyBase>();
             enem.OnReceiveDamage.AddListener(this.SwitchingState);
             //enemiesRegistred.Add(enem.gameObject);
         }
-        Debug.Log(collider.name);
-
     }
 
     public override void UpdateState(EnemyBaseStateMachine manager)
     {
-
+        
     }
 
-    /*private void OnTriggerStay(Collider other)
-    {
-        if (other.CompareTag("Enemy") && !other.isTrigger)
-        {
-            //EnemyBase enem = other.GetComponent<EnemyBase>();
-            //Debug.LogError(enem.OnReceiveDamage);
-            Debug.LogError("cum");
-
-            //enem.OnReceiveDamage.AddListener(this.SwitchingState);
-            //enemiesRegistred.Remove(enem.gameObject);
-        }
-    }*/
-
-    void SwitchingState(int damage, PlayerStaticVariable player)
+    public void SwitchingState(int damage, PlayerStaticVariable player)
     {
         Debug.Log(damage + " " + player.name);
         EnemyBaseStateMachine man = GetComponent<EnemyBaseStateMachine>();
@@ -79,11 +62,6 @@ public class GuardiaPasiveState : EnemyBaseState
 
     public override void TriggerExit(EnemyBaseStateMachine manager, Collider collider)
     {
-        if (collider.CompareTag("Enemy"))
-        {
-            EnemyBase enem = collider.GetComponent<EnemyBase>();
-            enem.OnReceiveDamage.RemoveListener(this.SwitchingState);
-            Debug.LogError(enem.OnReceiveDamage);
-        }
+        
     }
 }

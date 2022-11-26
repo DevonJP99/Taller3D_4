@@ -33,10 +33,14 @@ public class SceneManagement : MonoBehaviour
     {
         SceneManager.LoadScene("Menu");
     }
-    public void exit()
+    public void loadexit()
     {
         SceneManager.LoadScene("Salir");
-      //  Application.Quit();
+    }
+
+    public void salir()
+    {
+        Application.Quit();
     }
 
     public void AumentarCoins()

@@ -7,6 +7,8 @@ using TMPro;
 public class PlayerStaticVariable : MonoBehaviour
 {
     ProducCaracter producCarac;
+    public GameObject weapon;
+    public int cantiProc;
     public int compras;
     public int Maxcompras;
     public bool puedesComprar=true;
@@ -18,7 +20,7 @@ public class PlayerStaticVariable : MonoBehaviour
     public TextMeshProUGUI health;
     public TextMeshProUGUI puntoMembres;
     public int a;
-    
+    public bool Equipment;
 
     public bool interactuable=false;
     void Start()
@@ -42,7 +44,7 @@ public class PlayerStaticVariable : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-
+        
     }
     private void OnTriggerExit(Collider other)
     {
@@ -55,7 +57,12 @@ public class PlayerStaticVariable : MonoBehaviour
 
             compras = compras > 0 ? compras - 1 : 0;
         }
-       
+        if (collision.gameObject.CompareTag("Gun") && Input.GetKeyDown(KeyCode.E))
+        {
+            weapon.SetActive(true);
+            Equipment = true;
+        }
+
     }
 
     public float PercentComprasFilled()

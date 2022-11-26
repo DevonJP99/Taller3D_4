@@ -32,15 +32,16 @@ public class GuardiaAgresiveState : EnemyBaseState
             manager.GetNavMeshAgent().SetDestination(manager.playerDetected.transform.position);
             if (Vector3.Distance(manager.GetNavMeshAgent().destination,transform.position) < atakRadius)
             {
-                manager.playerDetected.vida -= damage;
-                Debug.Log("Stunear al player"); 
+                manager.GetNavMeshAgent().destination = transform.position;
+                /*manager.playerDetected.vida -= damage;
+                Debug.Log("Stunear al player"); */
             }
         }
     }
 
     public override void TriggerExit(EnemyBaseStateMachine manager, Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag(manager.name_player_tag))
         {
             manager.playerDetected = null;
             GetComponent<EnemyBaseStateMachine>().SwitchState(GetComponent<EnemyBaseStateMachine>().pasive);

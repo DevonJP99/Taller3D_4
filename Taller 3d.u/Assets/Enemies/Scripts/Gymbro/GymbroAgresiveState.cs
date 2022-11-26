@@ -46,7 +46,7 @@ public class GymbroAgresiveState : EnemyBaseState
             }
             head.transform.LookAt(manager.playerDetected.transform);
             transform.LookAt(manager.playerDetected.transform);
-            Debug.Log(delta);
+            //Debug.Log(delta);
         }
     }
 

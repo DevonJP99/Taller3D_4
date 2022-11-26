@@ -7,27 +7,14 @@ public class GuardiaPasiveState : EnemyBaseState
     [SerializeField]
     Transform position;
     float speedPassive = 10;
-    List<EnemyBaseStateMachine> enemyDetecteds;
-    //float radius = 0;
 
     public override void EnterState(EnemyBaseStateMachine manager)
     {
-        if (!position) position = transform;
-        //radius = GetComponent<SphereCollider>().radius;
+        Debug.Log("Awa");
+        //position = transform.position;
         manager.GetNavMeshAgent().speed = speedPassive;
         manager.GetNavMeshAgent().SetDestination(position.position);
         manager.OnReceiveDamage.AddListener(SwitchingState);
-        //Debug.Log(radius);
-        //RaycastHit[] objects_ = Physics.SphereCastAll(transform.position, radius, Vector3.up, 0);
-        //for (int i = 0; i < objects_.Length; i++)
-        //{
-        //    if (objects_[i].collider.CompareTag("Enemy"))
-        //    {
-        //        EnemyBase ee = objects_[i].collider.GetComponent<EnemyBase>();
-        //        ee.OnReceiveDamage.AddListener(this.SwitchingState);
-        //        //enemiesRegistred.Add(objects_[i].collider.gameObject);
-        //    }
-        //}
     }
 
 

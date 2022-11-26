@@ -284,6 +284,7 @@ GameObject:
   - component: {fileID: 647414249}
   - component: {fileID: 647414248}
   - component: {fileID: 647414247}
+  - component: {fileID: 647414250}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -356,6 +357,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &647414250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647414246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31404e462ffab8a418fddfb1824514ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalP: {fileID: 0}
+  puntoT: {fileID: 0}
+  mejorP: {fileID: 0}
 --- !u!1 &799249873
 GameObject:
   m_ObjectHideFlags: 0
@@ -716,7 +732,7 @@ GameObject:
   - component: {fileID: 1209478708}
   - component: {fileID: 1209478707}
   m_Layer: 5
-  m_Name: VALOR3
+  m_Name: mejorP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1520,7 +1536,7 @@ GameObject:
   - component: {fileID: 1677256335}
   - component: {fileID: 1677256334}
   m_Layer: 5
-  m_Name: VALOR2
+  m_Name: puntoT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1720,7 +1736,7 @@ GameObject:
   - component: {fileID: 1725513084}
   - component: {fileID: 1725513083}
   m_Layer: 5
-  m_Name: VALOR1
+  m_Name: totalP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1828,7 +1844,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -458.38257, y: 0, z: 0, w: 0}
+  m_margin: {x: -458.38257, y: 0, z: 436.07446, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

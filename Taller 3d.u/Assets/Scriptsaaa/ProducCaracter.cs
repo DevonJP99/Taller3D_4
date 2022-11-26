@@ -40,6 +40,7 @@ public class ProducCaracter : MonoBehaviour
 
         if (compras.compras + size <= compras.Maxcompras && interactuable && Input.GetKeyDown(KeyCode.E) && MejorasStatic.ofertaslimitas == false)
         {
+            compras.cantiProc++;
             compras.compras = compras.compras + size;
             rend.enabled = false;
             compras.puntaje = compras.puntaje + actualPunt;

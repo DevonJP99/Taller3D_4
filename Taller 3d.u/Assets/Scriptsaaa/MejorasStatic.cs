@@ -9,6 +9,9 @@ public static class MejorasStatic
     public static bool[] mejorasDesbloqueadasCarrito = new bool[] { false };
     public static bool ofertaslimitas=false;
     public static bool Si = false;
+    public static int totalP;
+    public static int puntoT;
+    public static int mejorP;
     public static void compraMejora(int i)
     {
         if(i==0 && coins>=5)

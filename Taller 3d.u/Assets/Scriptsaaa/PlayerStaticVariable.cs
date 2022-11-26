@@ -37,15 +37,31 @@ public class PlayerStaticVariable : MonoBehaviour
     void Update()
     {
         textMesh.text = puntaje.ToString();
-        Espacio.text = compras.ToString()+ "/" + Maxcompras.ToString();
+        Espacio.text = compras.ToString() + "/" + Maxcompras.ToString();
         health.text = vida.ToString();
-        puntoMembres.text = MejorasStatic.coins.ToString() ;
+        puntoMembres.text = MejorasStatic.coins.ToString();
+        MejorasStatic.totalP = MejorasStatic.totalP + cantiProc;
+        MejorasStatic.puntoT = MejorasStatic.puntoT + puntaje;
+
     }
-    
-    private void OnTriggerEnter(Collider other)
+
+    private void OnTriggerStay(Collider other)
     {
-        
+        if (other.gameObject.CompareTag("Gun") && Input.GetKeyDown(KeyCode.E))
+        {
+            weapon.SetActive(true);
+            Equipment = true;
+        }
     }
+
+    /*private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Gun"))
+        {
+            weapon.SetActive(true);
+            Equipment = true;
+        }
+    }*/
     private void OnTriggerExit(Collider other)
     {
         
@@ -57,16 +73,19 @@ public class PlayerStaticVariable : MonoBehaviour
 
             compras = compras > 0 ? compras - 1 : 0;
         }
-        if (collision.gameObject.CompareTag("Gun") && Input.GetKeyDown(KeyCode.E))
-        {
-            weapon.SetActive(true);
-            Equipment = true;
-        }
 
     }
 
     public float PercentComprasFilled()
     {
         return (float)((float)compras / (float)Maxcompras);
+    }
+
+    public void puntajemasalto()
+    {
+        if(MejorasStatic.mejorP < puntaje)
+        {
+            MejorasStatic.mejorP = puntaje;
+        }
     }
 }

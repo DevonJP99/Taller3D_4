@@ -6,13 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class Tutorial : MonoBehaviour
 {
-  
     public bool tutoComplete=false;
     public PlayerStaticVariable produc;
-    // Start is called before the first frame update
+    public recibir3 key;
     void Start()
     {
         produc = GameObject.Find("Cart Controller").GetComponent<PlayerStaticVariable>();
+        key = GameObject.Find("Auto").GetComponent<recibir3>();
     }
 
     // Update is called once per frame
@@ -22,7 +22,7 @@ public class Tutorial : MonoBehaviour
     }
     void Complete()
     {
-        if(produc.cantiProc==3 )
+        if(key.tutokey == 3 )
         {
             if(produc.Equipment==true)
             {
@@ -32,7 +32,7 @@ public class Tutorial : MonoBehaviour
     }
     public void loadOptions()
     {
-        SceneManager.LoadScene("zona de pruebas");
+        SceneManager.LoadScene("Zona de Pruebas");
     }
     private void OnTriggerEnter(Collider other)
     {

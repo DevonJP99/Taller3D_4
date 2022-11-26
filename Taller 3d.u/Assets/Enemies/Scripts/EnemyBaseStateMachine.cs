@@ -7,7 +7,7 @@ public class EnemyBaseStateMachine : EnemyBase
 {
     NavMeshAgent agent;
     EnemyBaseState current;
-
+    
     public EnemyBaseState pasive;
     public EnemyBaseState agresive;
 
@@ -19,8 +19,6 @@ public class EnemyBaseStateMachine : EnemyBase
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        //pasive = GetComponent<EnemyBaseState>();
-        //agresive = GetComponent<EnemyBaseState>();
         current = pasive;
         current.EnterState(this);
     }

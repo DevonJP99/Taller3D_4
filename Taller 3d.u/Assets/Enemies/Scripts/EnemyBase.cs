@@ -18,13 +18,13 @@ public class EnemyBase : MonoBehaviour
     public void ReceiveDamage(int damage_received, PlayerStaticVariable player)
     {
         life -= damage_received;
-        Debug.Log(life);
+        //Debug.Log(life);
         if (life <= 0)
         {
             Destroy(gameObject);
         }
-        Debug.Log(damage_received);
-        Debug.Log(player);
+        //Debug.Log(damage_received);
+        //Debug.Log(player);
         OnReceiveDamage?.Invoke(damage_received, player);
     }
 }

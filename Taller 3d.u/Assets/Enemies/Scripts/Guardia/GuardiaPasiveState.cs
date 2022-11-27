@@ -10,7 +10,7 @@ public class GuardiaPasiveState : EnemyBaseState
 
     public override void EnterState(EnemyBaseStateMachine manager)
     {
-        Debug.Log("Awa");
+        //Debug.Log("Awa");
         //position = transform.position;
         manager.GetNavMeshAgent().speed = speedPassive;
         manager.GetNavMeshAgent().SetDestination(position.position);

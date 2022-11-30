@@ -7,7 +7,8 @@ public class EnemyBaseStateMachine : EnemyBase
 {
     NavMeshAgent agent;
     EnemyBaseState current;
-    
+    [Header("States")]
+    [Space]
     public EnemyBaseState pasive;
     public EnemyBaseState agresive;
 

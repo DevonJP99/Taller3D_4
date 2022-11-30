@@ -82,7 +82,7 @@ public class Guns : MonoBehaviour
             //Debug.Log(rayHit.collider.name);
             if(rayHit.collider.CompareTag("Enemy"))
             {
-                rayHit.collider.GetComponent<EnemyBase>().ReceiveDamage(damage,owner);
+                rayHit.collider.GetComponent<CompradorStateManager>().ReceiveDamage(damage,owner);
                 Debug.Log(rayHit.collider.name);
             }
         }

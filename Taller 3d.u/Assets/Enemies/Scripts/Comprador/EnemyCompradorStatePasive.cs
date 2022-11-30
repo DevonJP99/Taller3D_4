@@ -5,14 +5,13 @@ using UnityEngine;
 public class EnemyCompradorStatePasive : EnemyBaseState
 {
     //carrito ya que carrito no tiene que ser hijo del enemigo es su propio obejto
-    [SerializeField]
-    List<Transform> pointsToGo;
+    public List<Transform> pointsToGo;
     int pointIndex = 0;
     float pasiveSpeed = 10;
 
     float maxCooldown = 5, minCooldown = 1;
     float cooldown = 5;
-    bool inAisle = false;
+    protected bool inAisle = false;
 
     void randomCooldown()
     {
@@ -21,7 +20,7 @@ public class EnemyCompradorStatePasive : EnemyBaseState
 
     public override void EnterState(EnemyBaseStateMachine manager)
     {
-        manager.OnReceiveDamage.AddListener(SwitchingAgresive);
+        //manager.OnReceiveDamage.AddListener(SwitchingAgresive);
 
         Debug.Log("Que me voy pa un aisle");
 
@@ -62,7 +61,7 @@ public class EnemyCompradorStatePasive : EnemyBaseState
         }*/
     }
 
-    Vector3 randomAisleSpace()
+    protected Vector3 randomAisleSpace()
     {
         pointIndex = (int)(Random.value * pointsToGo.Count);
         while (pointsToGo[pointIndex] == null)
@@ -73,35 +72,35 @@ public class EnemyCompradorStatePasive : EnemyBaseState
         return pointsToGo[pointIndex].position;
     }
 
-
+    
     public override void CollisionEnter(EnemyBaseStateMachine manager, Collision collision)
     {
-        if (collision.gameObject.CompareTag(manager.name_player_tag))
+        /*if (collision.gameObject.CompareTag(manager.name_player_tag))
         {
             PlayerStaticVariable playa = collision.gameObject.GetComponent<PlayerStaticVariable>();
-            SwitchingAgresive(0, playa);
-        }
+            //SwitchingAgresive(0, playa);
+        }*/
     }
 
     public override void TriggerEnter(EnemyBaseStateMachine manager, Collider collider)
     {
-        if (collider.gameObject.CompareTag(manager.name_player_tag))
+        /*if (collider.gameObject.CompareTag(manager.name_player_tag))
         {
             PlayerStaticVariable playa = collider.gameObject.GetComponent<PlayerStaticVariable>();
-            SwitchingAgresive(0, playa);
-        }
+            //SwitchingAgresive(0, playa);
+        }*/
     }
 
     public override void TriggerExit(EnemyBaseStateMachine manager, Collider collider)
     {
         //throw new System.NotImplementedException();
     }
-
+    /*
     public void SwitchingAgresive(int damage, PlayerStaticVariable player)
     {
         EnemyBaseStateMachine manager = GetComponent<EnemyBaseStateMachine>();
         manager.playerDetected = player;
         Debug.Log("HEY TE ENCONTREE");
         manager.SwitchState(manager.agresive);
-    }
+    }*/
 }

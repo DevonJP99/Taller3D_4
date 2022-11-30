@@ -2,53 +2,46 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GuardiaPasiveState : EnemyBaseState
+public class GuardiaPasiveState : EnemyCompradorStatePasive
 {
-    [SerializeField]
-    Transform position;
-    float speedPassive = 10;
-
-    public override void EnterState(EnemyBaseStateMachine manager)
-    {
-        //Debug.Log("Awa");
-        //position = transform.position;
-        manager.GetNavMeshAgent().speed = speedPassive;
-        manager.GetNavMeshAgent().SetDestination(position.position);
-        manager.OnReceiveDamage.AddListener(SwitchingState);
-    }
-
-
-    public override void CollisionEnter(EnemyBaseStateMachine manager, Collision collision)
-    {
-
-    }
 
     public override void TriggerEnter(EnemyBaseStateMachine manager, Collider collider)
     {
-        if (collider.gameObject.CompareTag("Enemy"))
+        if (collider.gameObject.CompareTag(manager.name_player_tag))
         {
-            EnemyBase enem = collider.GetComponent<EnemyBase>();
-            enem.OnReceiveDamage.AddListener(this.SwitchingState);
-            //enemiesRegistred.Add(enem.gameObject);
+            manager.SwitchState(manager.agresive);
         }
-    }
-
-    public override void UpdateState(EnemyBaseStateMachine manager)
-    {
-        
-    }
-
-    public void SwitchingState(int damage, PlayerStaticVariable player)
-    {
-        Debug.Log(damage + " " + player.name);
-        EnemyBaseStateMachine man = GetComponent<EnemyBaseStateMachine>();
-        man.playerDetected = player;
-        man.SwitchState(man.agresive);
-        man.OnReceiveDamage.RemoveListener(SwitchingState);
     }
 
     public override void TriggerExit(EnemyBaseStateMachine manager, Collider collider)
     {
-        
+       
+    }
+
+    public override void CollisionEnter(EnemyBaseStateMachine manager, Collision collision)
+    {
+        //throw new System.NotImplementedException();
+    }
+
+    public override void UpdateState(EnemyBaseStateMachine manager)
+    {
+        if (inAisle)
+        {
+            manager.GetNavMeshAgent().SetDestination(randomAisleSpace());
+            inAisle = false;
+        }
+        else
+        {
+            float deltaDiference = .6f;
+            if (Vector3.Distance(manager.transform.position, manager.GetNavMeshAgent().destination) < deltaDiference)
+            {
+                inAisle = true;
+            }
+        }
+
+        /*if (Vector3.Distance(manager.transform.position, manager.GetNavMeshAgent().destination) < .1f)
+        {
+            manager.GetNavMeshAgent().SetDestination(randomAisleSpace());
+        }*/
     }
 }

@@ -17,20 +17,20 @@ public class PlayerStaticVariable : MonoBehaviour
     public int puntoMembresia;
     public TextMeshProUGUI textMesh;
     public TextMeshProUGUI Espacio;
-    public TextMeshProUGUI health;
-    public TextMeshProUGUI puntoMembres;
+    /*public TextMeshProUGUI health;*/
+    /*public TextMeshProUGUI puntoMembres;*/
     public int a;
     public bool Equipment;
 
     public bool interactuable=false;
     void Start()
     {
-        Maxcompras = 25;
+        
        
         textMesh = GameObject.Find("Puntos").GetComponent<TextMeshProUGUI>();
         Espacio = GameObject.Find("Espacio").GetComponent<TextMeshProUGUI>();
-        health = GameObject.Find("Vida").GetComponent<TextMeshProUGUI>();
-        puntoMembres = GameObject.Find("Membre").GetComponent<TextMeshProUGUI>();
+        /*health = GameObject.Find("Vida").GetComponent<TextMeshProUGUI>();*/
+        /*puntoMembres = GameObject.Find("Membre").GetComponent<TextMeshProUGUI>();*/
     }
 
     // Update is called once per frame
@@ -38,20 +38,20 @@ public class PlayerStaticVariable : MonoBehaviour
     {
         textMesh.text = puntaje.ToString();
         Espacio.text = compras.ToString() + "/" + Maxcompras.ToString();
-        health.text = vida.ToString();
-        puntoMembres.text = MejorasStatic.coins.ToString();
+        /*health.text = vida.ToString();*/
+        /*puntoMembres.text = MejorasStatic.coins.ToString();*/
       
         puntajemasalto();
 
     }
-    private void OnTriggerStay(Collider other)
+   /* private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.CompareTag("Gun") && Input.GetKeyDown(KeyCode.E))
+        if (other.gameObject.CompareTag("Gun") && Input.GetKeyDown(KeyCode.E)
         {
             weapon.SetActive(true);
             Equipment = true;
         }
-    }
+    }*/
 
     /*private void OnTriggerEnter(Collider other)
     {

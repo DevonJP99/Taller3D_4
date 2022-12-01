@@ -11,72 +11,71 @@ public class ProducCaracter : MonoBehaviour
     public int descuento;
     public int puntaje;
     public int actualPunt;
-    public bool interactuable;
-    public Renderer rend;
-    public int a = 1;
+    /*public bool interactuable;
+    /*public Renderer rend;
+    /*public int a = 1;
     public bool maldito = false;
-    public int b;
-    public int MaxDescuento;
-    public int MinDescuento;
+    public int b;*/
+    public int Descuento2;
 
 
     // Start is called before the first frame update
     private void Awake()
     {
         compras = GameObject.Find(Name).GetComponent<PlayerStaticVariable>();
-        descuento = Random.Range(MinDescuento, MaxDescuento) * 10;
+        descuento = Descuento2* 10;
         Puntos();
-        b = Random.Range(1,10);
+        
     }
     void Start()
     {
-        rend = GetComponent<Renderer>();
+        /*rend = GetComponent<Renderer>();*/
     }
 
     // Update is called once per frame
     void Update()
     {
-        LimitOfers();
+        
 
-        if (compras.compras + size <= compras.Maxcompras && interactuable && Input.GetKeyDown(KeyCode.E) && MejorasStatic.ofertaslimitas == false)
+        /*if (compras.compras + size <= compras.Maxcompras && interactuable && Input.GetKeyDown(KeyCode.E) && MejorasStatic.ofertaslimitas == false)
         {
             compras.cantiProc++;
             compras.compras = compras.compras + size;
             rend.enabled = false;
             compras.puntaje = compras.puntaje + actualPunt;
             AutoDestruccion();
-        }
-        if (compras.compras + size <= compras.Maxcompras && interactuable && Input.GetKeyDown(KeyCode.E) && MejorasStatic.ofertaslimitas == true)
+        }*/
+        /*if (compras.compras + size <= compras.Maxcompras && interactuable && Input.GetKeyDown(KeyCode.E) && MejorasStatic.ofertaslimitas == true)
         {
             compras.compras = compras.compras + size;
             rend.enabled = false;
             compras.puntaje = compras.puntaje + actualPunt;
             compras.puntoMembresia = compras.puntoMembresia + 1;
             AutoDestruccion();
-        }
+        }*/
 
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag(Name))
+        if (other.gameObject.CompareTag(Name) && compras.compras + size <= compras.Maxcompras)
         {
-            interactuable = true;
+            compras.cantiProc++;
+            compras.compras = compras.compras + size;
+            compras.puntaje = compras.puntaje + actualPunt;
+            Destroy(gameObject);
         }
         
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == Name)
-        {
-            interactuable = false;
-        }
+        
     }
     public void Puntos()
     {
         puntaje = price +(price* descuento)/100;
         actualPunt = puntaje;
     }
-    public void LimitOfers()
+    /*public void LimitOfers()
     {
         if (MejorasStatic.ofertaslimitas == true && MejorasStatic.Si)
         {
@@ -89,17 +88,6 @@ public class ProducCaracter : MonoBehaviour
         {
             actualPunt = puntaje;
         } 
-    }
-
-    public void ObjetoMaldito()
-    {
-        if(b%7 == 0)
-        {
-            maldito = true;
-        }
-    }
-    public void AutoDestruccion()
-    {
-        Destroy(gameObject);
-    }
+    } */
+    
 }

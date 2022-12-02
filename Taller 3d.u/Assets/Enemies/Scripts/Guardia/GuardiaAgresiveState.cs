@@ -4,19 +4,28 @@ using UnityEngine;
 
 public class GuardiaAgresiveState : EnemyBaseState
 {
+    public Transform entrancePosition;
     float agresivespeed = 20;
-    float atakRadius = 5;
-    public int damage = 10;
 
     public override void CollisionEnter(EnemyBaseStateMachine manager, Collision collision)
     {
-
+        if (collision.gameObject.CompareTag(manager.name_player_tag))
+        {
+            collision.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            collision.gameObject.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+            collision.transform.rotation = Quaternion.identity;
+            collision.gameObject.transform.position = entrancePosition.position;
+            int comm = collision.gameObject.GetComponent<PlayerStaticVariable>().compras;
+            collision.gameObject.GetComponent<PlayerStaticVariable>().compras = comm > 0 ? (int)(comm /2) : 0; 
+            manager.playerDetected = null;
+            GetComponent<EnemyBaseStateMachine>().SwitchState(GetComponent<EnemyBaseStateMachine>().pasive);
+        }
     }
 
     public override void EnterState(EnemyBaseStateMachine manager)
     {
         manager.GetNavMeshAgent().speed = agresivespeed;
-        //Debug.Log(manager.playerDetected);
+        Debug.Log(manager.playerDetected);
         manager.GetNavMeshAgent().SetDestination(manager.playerDetected.transform.position);
     }
 
@@ -27,16 +36,7 @@ public class GuardiaAgresiveState : EnemyBaseState
 
     public override void UpdateState(EnemyBaseStateMachine manager)
     {
-        if (manager.playerDetected)
-        {
-            manager.GetNavMeshAgent().SetDestination(manager.playerDetected.transform.position);
-            if (Vector3.Distance(manager.GetNavMeshAgent().destination,transform.position) < atakRadius)
-            {
-                manager.GetNavMeshAgent().destination = transform.position;
-                /*manager.playerDetected.vida -= damage;
-                Debug.Log("Stunear al player"); */
-            }
-        }
+        
     }
 
     public override void TriggerExit(EnemyBaseStateMachine manager, Collider other)
@@ -44,7 +44,7 @@ public class GuardiaAgresiveState : EnemyBaseState
         if (other.CompareTag(manager.name_player_tag))
         {
             manager.playerDetected = null;
-            GetComponent<EnemyBaseStateMachine>().SwitchState(GetComponent<EnemyBaseStateMachine>().pasive);
+            manager.SwitchState(manager.pasive);
         }
     }
 }

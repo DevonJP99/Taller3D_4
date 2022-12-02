@@ -28,7 +28,7 @@ public class EnemyManager : MonoBehaviour
         delt += Time.deltaTime;
         if (!Guards[(int)(delt/60)].activeSelf)
         {
-            Guards[(int)delt].SetActive(true);
+            Guards[(int)(delt / 60)].SetActive(true);
         }
     }
 
@@ -41,6 +41,7 @@ public class EnemyManager : MonoBehaviour
             GameObject enemy = Instantiate(enemyPrefab, stores[(int)(Random.value * stores.Count)].position, Quaternion.identity, transform);
             enemy.GetComponent<EnemyCompradorStatePasive>().pointsToGo = toGoPoints;
             enemieSpawned.Add(enemy);
+            enemy.SetActive(true);
         }
     }
 }

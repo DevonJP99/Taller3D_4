@@ -9,6 +9,8 @@ public class GuardiaPasiveState : EnemyCompradorStatePasive
     {
         if (collider.gameObject.CompareTag(manager.name_player_tag))
         {
+            manager.playerDetected = collider.gameObject.GetComponent<PlayerStaticVariable>();
+            manager.GetNavMeshAgent().destination = transform.position;
             manager.SwitchState(manager.agresive);
         }
     }

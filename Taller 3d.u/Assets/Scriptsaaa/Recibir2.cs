@@ -15,9 +15,11 @@ public class Recibir2 : MonoBehaviour
         if (other.gameObject.CompareTag(Name))
         {
             compras.compras = 0;
-            MejorasStatic.coins = MejorasStatic.coins + compras.puntoMembresia;
+            compras.puntajeScreen = compras.puntajeScreen + compras.puntaje;
+            compras.puntaje = 0;
+            MejorasStatic.pesado = false;
 
-            compras.puntoMembresia = 0;
+            
         }
     }
 }

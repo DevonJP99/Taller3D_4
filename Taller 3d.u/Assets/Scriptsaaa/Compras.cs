@@ -24,7 +24,7 @@ public class Compras : MonoBehaviour
     private void ofertas()
     {
         MejorasStatic.ofertaslimitas = true;
-        MejorasStatic.Si = true;
+       
         Ofertas.text = "OFERTAS INCIADAS";       
     }
 
@@ -32,13 +32,13 @@ public class Compras : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         MejorasStatic.ofertaslimitas = true;
-        MejorasStatic.Si = true;
+        
         Ofertas.text = "OFERTAS INCIADAS";
 
         yield return new WaitForSeconds(timerepeat);
         Ofertas.text = "OFERTAS TERMINADAS";
         MejorasStatic.ofertaslimitas = false;
-        MejorasStatic.Si = false;
+        
 
 
     }

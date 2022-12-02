@@ -11,9 +11,11 @@ public class ProducCaracter : MonoBehaviour
     public int descuento;
     public int puntaje;
     public int actualPunt;
+    public int a = 1;
+    public bool pesado=false;
     /*public bool interactuable;
     /*public Renderer rend;
-    /*public int a = 1;
+    
     public bool maldito = false;
     public int b;*/
     public int Descuento2;
@@ -35,8 +37,9 @@ public class ProducCaracter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
 
+        LimitOfers();
+        
         /*if (compras.compras + size <= compras.Maxcompras && interactuable && Input.GetKeyDown(KeyCode.E) && MejorasStatic.ofertaslimitas == false)
         {
             compras.cantiProc++;
@@ -54,17 +57,26 @@ public class ProducCaracter : MonoBehaviour
             AutoDestruccion();
         }*/
 
+        
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag(Name) && compras.compras + size <= compras.Maxcompras)
+        if (other.gameObject.CompareTag(Name) && compras.compras + size <= compras.Maxcompras && pesado==false)
         {
             compras.cantiProc++;
             compras.compras = compras.compras + size;
             compras.puntaje = compras.puntaje + actualPunt;
             Destroy(gameObject);
         }
-        
+        else
+        if (other.gameObject.CompareTag(Name) && compras.compras + size <= compras.Maxcompras && pesado==true)
+        {
+            compras.cantiProc++;
+            compras.compras = compras.compras + size;
+            compras.puntaje = compras.puntaje + actualPunt;
+            Destroy(gameObject);
+            MejorasStatic.pesado = true;
+        }
     }
     private void OnTriggerExit(Collider other)
     {
@@ -75,19 +87,20 @@ public class ProducCaracter : MonoBehaviour
         puntaje = price +(price* descuento)/100;
         actualPunt = puntaje;
     }
-    /*public void LimitOfers()
+    public void LimitOfers()
     {
-        if (MejorasStatic.ofertaslimitas == true && MejorasStatic.Si)
+        if (MejorasStatic.ofertaslimitas == true )
         {
             a=2;
             actualPunt = puntaje * a;
-            MejorasStatic.Si = false;
+            
             
         }
-        else if(MejorasStatic.ofertaslimitas == false && MejorasStatic.Si==false)
+        else if(MejorasStatic.ofertaslimitas == false )
         {
             actualPunt = puntaje;
         } 
-    } */
+    } 
+  
     
 }

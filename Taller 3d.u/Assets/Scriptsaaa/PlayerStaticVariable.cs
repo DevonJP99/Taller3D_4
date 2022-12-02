@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-
+using DavidJalbert;
 public class PlayerStaticVariable : MonoBehaviour
 {
+    TinyCarController controll;
     ProducCaracter producCarac;
     public GameObject weapon;
     public int cantiProc;
@@ -14,6 +15,7 @@ public class PlayerStaticVariable : MonoBehaviour
     public bool puedesComprar=true;
     public int vida;
     public int puntaje;
+    public int puntajeScreen;
     public int puntoMembresia;
     public TextMeshProUGUI textMesh;
     public TextMeshProUGUI Espacio;
@@ -25,8 +27,8 @@ public class PlayerStaticVariable : MonoBehaviour
     public bool interactuable=false;
     void Start()
     {
-        
-       
+
+        controll = GameObject.Find("Cart Controller").GetComponent<TinyCarController>();
         textMesh = GameObject.Find("Puntos").GetComponent<TextMeshProUGUI>();
         Espacio = GameObject.Find("Espacio").GetComponent<TextMeshProUGUI>();
         /*health = GameObject.Find("Vida").GetComponent<TextMeshProUGUI>();*/
@@ -36,7 +38,8 @@ public class PlayerStaticVariable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        textMesh.text = puntaje.ToString();
+        
+        textMesh.text = puntajeScreen.ToString();
         Espacio.text = compras.ToString() + "/" + Maxcompras.ToString();
         /*health.text = vida.ToString();*/
         /*puntoMembres.text = MejorasStatic.coins.ToString();*/

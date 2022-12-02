@@ -7,8 +7,8 @@ public class CompradorStateManager : EnemyBaseStateMachine
 {
     [SerializeField]
     Collider cart;
-    float force = 50;
-    float horizontal_force = 200;
+    float force = 25;
+    float horizontal_force = 500;
 
     public void ReceiveDamage(int damage_received, PlayerStaticVariable player)
     {
@@ -25,7 +25,6 @@ public class CompradorStateManager : EnemyBaseStateMachine
         GetComponent<Rigidbody>().useGravity = false;
         GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         GetComponent<Rigidbody>().angularVelocity = Vector3.up * horizontal_force;
-        //GetComponent<Rigidbody>().velocity = (transform.position - player.transform.position).normalized * force; 
-        GetComponent<Rigidbody>().AddForce((transform.position - player.transform.position).normalized * force, ForceMode.Impulse); 
+        GetComponent<Rigidbody>().AddForce((transform.position - player.transform.position).normalized * force + Vector3.up * force, ForceMode.Impulse); 
     }
 }

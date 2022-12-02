@@ -90,4 +90,5 @@ public class PlayerStaticVariable : MonoBehaviour
             MejorasStatic.mejorP = puntaje;
         }
     }
+    
 }

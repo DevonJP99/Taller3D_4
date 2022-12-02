@@ -6,8 +6,7 @@ using UnityEngine.Events;
 public class EnemyBase : MonoBehaviour
 {
     [Header("Collider")]
-    [SerializeField]
-    Collider self;
+    public Collider self;
     
 
     [Header("Player info")]

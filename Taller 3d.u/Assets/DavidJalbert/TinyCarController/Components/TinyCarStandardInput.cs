@@ -6,6 +6,7 @@ namespace DavidJalbert
 {
     public class TinyCarStandardInput : MonoBehaviour
     {
+        //public PlayerStaticVariable 
         public TinyCarController carController;
 
         public enum InputType

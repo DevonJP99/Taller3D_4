@@ -38,7 +38,7 @@ public class PlayerStaticVariable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //Debug.Log(MejorasStatic.sprint); 
         textMesh.text = puntajeScreen.ToString();
         Espacio.text = compras.ToString() + "/" + Maxcompras.ToString();
         /*health.text = vida.ToString();*/

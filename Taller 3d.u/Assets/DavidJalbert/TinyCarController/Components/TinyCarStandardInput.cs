@@ -104,11 +104,11 @@ namespace DavidJalbert
             {
                 carController.setBoostMultiplier(2);
                 staminaController.Sprinting();
-                
+                MejorasStatic.sprint = true;
             }
             if(Input.GetKeyUp(KeyCode.LeftShift) || staminaController.cartStamina<=0)
             {
-
+                MejorasStatic.sprint = false;
                 carController.setBoostMultiplier(1);
                 staminaController.CartSprinting = false;
             }

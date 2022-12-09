@@ -380,6 +380,7 @@ MonoBehaviour:
   pasive: {fileID: 9010760920645295164}
   agresive: {fileID: 6073404632754308691}
   cart: {fileID: 2136848157439160225}
+  player: {fileID: 0}
 --- !u!114 &6073404632754308691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -405,6 +406,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointsToGo: []
+--- !u!114 &-6908748866183992100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2635109796997100689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eca3295cead81f04189de7ea8a3bf696, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8188964672507230880
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -8,6 +8,7 @@ public static class MejorasStatic
     public static bool[] mejorasDesbloqueadasGaranty = new bool[] { false, false, false};
     public static bool[] mejorasDesbloqueadasCarrito = new bool[] { false };
     public static bool ofertaslimitas=false;
+    public static bool sprint = false;
     public static bool pesado=false;
     public static int totalP;
     public static int puntoT;

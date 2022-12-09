@@ -38,9 +38,6 @@ public class Compras : MonoBehaviour
         yield return new WaitForSeconds(timerepeat);
         Ofertas.text = "OFERTAS TERMINADAS";
         MejorasStatic.ofertaslimitas = false;
-        
-
-
     }
 
 }

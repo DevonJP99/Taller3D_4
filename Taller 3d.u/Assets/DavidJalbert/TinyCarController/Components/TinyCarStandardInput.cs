@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 namespace DavidJalbert
 {
@@ -8,7 +10,12 @@ namespace DavidJalbert
     {
         //public PlayerStaticVariable 
         public TinyCarController carController;
-
+        public Staminacontroller staminaController;
+        public TextMeshProUGUI timer;
+        [SerializeField]
+        private bool readyToboost;
+        public float boostNormal;
+    
         public enum InputType
         {
             None, Axis, RawAxis, Key, Button
@@ -47,22 +54,30 @@ namespace DavidJalbert
 
         void Start()
         {
-        
+            timer = GameObject.Find("Boost").GetComponent<TextMeshProUGUI>();
+            staminaController = GameObject.Find("Cart Controller").GetComponent<Staminacontroller>();
         }
 
         void Update()
         {
             float motorDelta = getInput(forwardInput) - getInput(reverseInput);
             float steeringDelta = getInput(steerRightInput) - getInput(steerLeftInput);
-            if (getInput(boostInput) == 1 && boostTimer == 0)
+
+            /*Input.GetButtonDown("left shift")*/
+            /*Input.GetKeyDown(KeyCode.LeftShift)*/
+            /*if (getInput(boostInput) == 1 && boostTimer == 0)
             {
                 boostTimer = boostCoolOff + boostDuration;
-            }
-            else if (boostTimer > 0)
-            {
-                boostTimer = Mathf.Max(boostTimer - Time.deltaTime, 0);
-                carController.setBoostMultiplier(boostTimer > boostCoolOff ? boostMultiplier : 1);
-            }
+
+                if (boostTimer > 0)
+                {
+                    boostTimer = Mathf.Max(boostTimer - Time.deltaTime, 0);
+                    carController.setBoostMultiplier(boostTimer > boostCoolOff ? boostMultiplier : 1);
+                }
+            }*/
+            boost();
+
+            timer.text = boostTimer.ToString("f0");
 
             carController.setSteering(steeringDelta);
             carController.setMotor(motorDelta);
@@ -81,5 +96,26 @@ namespace DavidJalbert
             if (v.invert) value *= -1;
             return Mathf.Clamp01(value);
         }
+        public void CDBosst()
+        {
+            readyToboost = true;
+           
+        }
+        public void boost()
+        {
+            if (Input.GetKey(KeyCode.LeftShift) && staminaController.cartStamina >= 0 && staminaController.hasRegenerated == true)
+            {
+                carController.setBoostMultiplier(2);
+                staminaController.Sprinting();
+                
+            }
+            if(Input.GetKeyUp(KeyCode.LeftShift) || staminaController.cartStamina<=0)
+            {
+
+                carController.setBoostMultiplier(1);
+                staminaController.CartSprinting = false;
+            }
+        }
+     
     }
 }

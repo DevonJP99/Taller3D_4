@@ -11,7 +11,6 @@ namespace DavidJalbert
         //public PlayerStaticVariable 
         public TinyCarController carController;
         public Staminacontroller staminaController;
-        public TextMeshProUGUI timer;
         [SerializeField]
         private bool readyToboost;
         public float boostNormal;
@@ -54,7 +53,6 @@ namespace DavidJalbert
 
         void Start()
         {
-            timer = GameObject.Find("Boost").GetComponent<TextMeshProUGUI>();
             staminaController = GameObject.Find("Cart Controller").GetComponent<Staminacontroller>();
         }
 
@@ -77,7 +75,6 @@ namespace DavidJalbert
             }*/
             boost();
 
-            timer.text = boostTimer.ToString("f0");
 
             carController.setSteering(steeringDelta);
             carController.setMotor(motorDelta);

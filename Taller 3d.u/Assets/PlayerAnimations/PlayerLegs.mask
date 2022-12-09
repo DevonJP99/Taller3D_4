@@ -1,0 +1,440 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: PlayerLegs
+  m_Mask: 00000000000000000100000000000000000000000100000001000000010000000100000000000000000000000000000000000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: D_Brazo_G_1
+    m_Weight: 1
+  - m_Path: D_Brazo_G_1/D_Brazo_C_1
+    m_Weight: 1
+  - m_Path: D_Brazo_G_1/D_Brazo_C_1/D_Brazo_G_2
+    m_Weight: 1
+  - m_Path: D_Brazo_G_1/D_Brazo_C_1/D_Brazo_G_2/D_Brazo_C_2
+    m_Weight: 1
+  - m_Path: D_Brazo_G_1/D_Brazo_C_1/D_Brazo_G_2/D_Brazo_C_2/D_Brazo_G_3
+    m_Weight: 1
+  - m_Path: D_Brazo_G_1/D_Brazo_C_1/D_Brazo_G_2/D_Brazo_C_2/D_Brazo_G_3/D_Brazo_C_3
+    m_Weight: 1
+  - m_Path: D_Brazo_G_1/D_Brazo_C_1/D_Brazo_G_2/D_Brazo_C_2/D_Brazo_G_3/D_Brazo_C_3/D_dedo_G_1_a
+    m_Weight: 1
+  - m_Path: D_Brazo_G_1/D_Brazo_C_1/D_Brazo_G_2/D_Brazo_C_2/D_Brazo_G_3/D_Brazo_C_3/D_dedo_G_1_a/D_dedo_C_1_a
+    m_Weight: 1
+  - m_Path: D_Brazo_G_1/D_Brazo_C_1/D_Brazo_G_2/D_Brazo_C_2/D_Brazo_G_3/D_Brazo_C_3/D_dedo_G_1_a/D_dedo_C_1_a/D_dedo_G_1_b
+    m_Weight: 1
+  - m_Path: D_Brazo_G_1/D_Brazo_C_1/D_Brazo_G_2/D_Brazo_C_2/D_Brazo_G_3/D_Brazo_C_3/D_dedo_G_1_a/D_dedo_C_1_a/D_dedo_G_1_b/D_dedo_C_1_b
+    m_Weight: 1
+  - m_Path: D_Brazo_G_1/D_Brazo_C_1/D_Brazo_G_2/D_Brazo_C_2/D_Brazo_G_3/D_Brazo_C_3/D_dedo_G_1_a/D_dedo_C_1_a/D_dedo_G_1_b/D_dedo_C_1_b/D_dedo_G_1_c
+    m_Weight: 1
+  - m_Path: D_Brazo_G_1/D_Brazo_C_1/D_Brazo_G_2/D_Brazo_C_2/D_Brazo_G_3/D_Brazo_C_3/D_dedo_G_1_a/D_dedo_C_1_a/D_dedo_G_1_b/D_dedo_C_1_b/D_dedo_G_1_c/D_dedo_C_1_c
+    m_Weight: 1
+  - m_Path: D_Brazo_G_1/D_Brazo_C_1/D_Brazo_G_2/D_Brazo_C_2/D_Brazo_G_3/D_Brazo_C_3/D_dedo_G_1_a/D_dedo_C_1_a/D_dedo_G_1_b/D_dedo_C_1_b/D_dedo_G_1_c/D_dedo_C_1_c/D_dedo_G_1_d
+    m_Weight: 1
+  - m_Path: D_Brazo_G_1/D_Brazo_C_1/D_Brazo_G_2/D_Brazo_C_2/D_Brazo_G_3/D_Brazo_C_3/D_dedo_G_1_a/D_dedo_C_1_a/D_dedo_G_1_b/D_dedo_C_1_b/D_dedo_G_1_c/D_dedo_C_1_c/D_dedo_G_1_d/D_dedo_C_1_d
+    m_Weight: 1
+  - m_Path: D_Brazo_G_1/D_Brazo_C_1/D_Brazo_G_2/D_Brazo_C_2/D_Brazo_G_3/D_Brazo_C_3/D_dedo_G_2_a
+    m_Weight: 1
+  - m_Path: D_Brazo_G_1/D_Brazo_C_1/D_Brazo_G_2/D_Brazo_C_2/D_Brazo_G_3/D_Brazo_C_3/D_dedo_G_2_a/D_dedo_C_2_a
+    m_Weight: 1
+  - m_Path: D_Brazo_G_1/D_Brazo_C_1/D_Brazo_G_2/D_Brazo_C_2/D_Brazo_G_3/D_Brazo_C_3/D_dedo_G_2_a/D_dedo_C_2_a/D_dedo_G_2_b
+    m_Weight: 1
+  - m_Path: D_Brazo_G_1/D_Brazo_C_1/D_Brazo_G_2/D_Brazo_C_2/D_Brazo_G_3/D_Brazo_C_3/D_dedo_G_2_a/D_dedo_C_2_a/D_dedo_G_2_b/D_dedo_C_2_b
+    m_Weight: 1
+  - m_Path: D_Brazo_G_1/D_Brazo_C_1/D_Brazo_G_2/D_Brazo_C_2/D_Brazo_G_3/D_Brazo_C_3/D_dedo_G_2_a/D_dedo_C_2_a/D_dedo_G_2_b/D_dedo_C_2_b/D_dedo_G_2_c
+    m_Weight: 1
+  - m_Path: D_Brazo_G_1/D_Brazo_C_1/D_Brazo_G_2/D_Brazo_C_2/D_Brazo_G_3/D_Brazo_C_3/D_dedo_G_2_a/D_dedo_C_2_a/D_dedo_G_2_b/D_dedo_C_2_b/D_dedo_G_2_c/D_dedo_C_2_c
+    m_Weight: 1
+  - m_Path: D_Brazo_G_1/D_Brazo_C_1/D_Brazo_G_2/D_Brazo_C_2/D_Brazo_G_3/D_Brazo_C_3/D_dedo_G_2_a/D_dedo_C_2_a/D_dedo_G_2_b/D_dedo_C_2_b/D_dedo_G_2_c/D_dedo_C_2_c/D_dedo_G_2_d
+    m_Weight: 1
+  - m_Path: D_Brazo_G_1/D_Brazo_C_1/D_Brazo_G_2/D_Brazo_C_2/D_Brazo_G_3/D_Brazo_C_3/D_dedo_G_2_a/D_dedo_C_2_a/D_dedo_G_2_b/D_dedo_C_2_b/D_dedo_G_2_c/D_dedo_C_2_c/D_dedo_G_2_d/D_dedo_C_2_d
+    m_Weight: 1
+  - m_Path: D_Brazo_G_1/D_Brazo_C_1/D_Brazo_G_2/D_Brazo_C_2/D_Brazo_G_3/D_Brazo_C_3/D_dedo_G_3_a
+    m_Weight: 1
+  - m_Path: D_Brazo_G_1/D_Brazo_C_1/D_Brazo_G_2/D_Brazo_C_2/D_Brazo_G_3/D_Brazo_C_3/D_dedo_G_3_a/D_dedo_C_3_a
+    m_Weight: 1
+  - m_Path: D_Brazo_G_1/D_Brazo_C_1/D_Brazo_G_2/D_Brazo_C_2/D_Brazo_G_3/D_Brazo_C_3/D_dedo_G_3_a/D_dedo_C_3_a/D_dedo_G_3_b
+    m_Weight: 1
+  - m_Path: D_Brazo_G_1/D_Brazo_C_1/D_Brazo_G_2/D_Brazo_C_2/D_Brazo_G_3/D_Brazo_C_3/D_dedo_G_3_a/D_dedo_C_3_a/D_dedo_G_3_b/D_dedo_C_3_b
+    m_Weight: 1
+  - m_Path: D_Brazo_G_1/D_Brazo_C_1/D_Brazo_G_2/D_Brazo_C_2/D_Brazo_G_3/D_Brazo_C_3/D_dedo_G_3_a/D_dedo_C_3_a/D_dedo_G_3_b/D_dedo_C_3_b/D_dedo_G_3_c
+    m_Weight: 1
+  - m_Path: D_Brazo_G_1/D_Brazo_C_1/D_Brazo_G_2/D_Brazo_C_2/D_Brazo_G_3/D_Brazo_C_3/D_dedo_G_3_a/D_dedo_C_3_a/D_dedo_G_3_b/D_dedo_C_3_b/D_dedo_G_3_c/D_dedo_C_3_c
+    m_Weight: 1
+  - m_Path: D_Brazo_G_1/D_Brazo_C_1/D_Brazo_G_2/D_Brazo_C_2/D_Brazo_G_3/D_Brazo_C_3/D_dedo_G_3_a/D_dedo_C_3_a/D_dedo_G_3_b/D_dedo_C_3_b/D_dedo_G_3_c/D_dedo_C_3_c/D_dedo_G_3_d
+    m_Weight: 1
+  - m_Path: D_Brazo_G_1/D_Brazo_C_1/D_Brazo_G_2/D_Brazo_C_2/D_Brazo_G_3/D_Brazo_C_3/D_dedo_G_3_a/D_dedo_C_3_a/D_dedo_G_3_b/D_dedo_C_3_b/D_dedo_G_3_c/D_dedo_C_3_c/D_dedo_G_3_d/D_dedo_C_3_d
+    m_Weight: 1
+  - m_Path: D_Brazo_G_1/D_Brazo_C_1/D_Brazo_G_2/D_Brazo_C_2/D_Brazo_G_3/D_Brazo_C_3/D_dedo_G_4_a
+    m_Weight: 1
+  - m_Path: D_Brazo_G_1/D_Brazo_C_1/D_Brazo_G_2/D_Brazo_C_2/D_Brazo_G_3/D_Brazo_C_3/D_dedo_G_4_a/D_dedo_C_4_a
+    m_Weight: 1
+  - m_Path: D_Brazo_G_1/D_Brazo_C_1/D_Brazo_G_2/D_Brazo_C_2/D_Brazo_G_3/D_Brazo_C_3/D_dedo_G_4_a/D_dedo_C_4_a/D_dedo_G_4_b
+    m_Weight: 1
+  - m_Path: D_Brazo_G_1/D_Brazo_C_1/D_Brazo_G_2/D_Brazo_C_2/D_Brazo_G_3/D_Brazo_C_3/D_dedo_G_4_a/D_dedo_C_4_a/D_dedo_G_4_b/D_dedo_C_4_b
+    m_Weight: 1
+  - m_Path: D_Brazo_G_1/D_Brazo_C_1/D_Brazo_G_2/D_Brazo_C_2/D_Brazo_G_3/D_Brazo_C_3/D_dedo_G_4_a/D_dedo_C_4_a/D_dedo_G_4_b/D_dedo_C_4_b/D_dedo_G_4_c
+    m_Weight: 1
+  - m_Path: D_Brazo_G_1/D_Brazo_C_1/D_Brazo_G_2/D_Brazo_C_2/D_Brazo_G_3/D_Brazo_C_3/D_dedo_G_4_a/D_dedo_C_4_a/D_dedo_G_4_b/D_dedo_C_4_b/D_dedo_G_4_c/D_dedo_C_4_c
+    m_Weight: 1
+  - m_Path: D_Foot_a_G
+    m_Weight: 1
+  - m_Path: D_Foot_a_G/D_Foot_a_Ctrl
+    m_Weight: 1
+  - m_Path: D_Foot_a_G/D_Foot_a_Ctrl/transform1
+    m_Weight: 1
+  - m_Path: D_Foot_a_G/D_Foot_a_Ctrl/transform1/D_Foot_d_J_talon
+    m_Weight: 1
+  - m_Path: D_Foot_a_G/D_Foot_a_Ctrl/transform1/D_Foot_d_J_talon/D_Foot_c_J_R
+    m_Weight: 1
+  - m_Path: D_Foot_a_G/D_Foot_a_Ctrl/transform1/D_Foot_d_J_talon/D_Foot_c_J_R/D_Foot_b_J_R
+    m_Weight: 1
+  - m_Path: D_Foot_a_G/D_Foot_a_Ctrl/transform1/D_Foot_d_J_talon/D_Foot_c_J_R/D_Foot_b_J_R/D_Foot_a_J_R
+    m_Weight: 1
+  - m_Path: D_Foot_a_G/D_Foot_a_Ctrl/transform1/D_Foot_d_J_talon/D_Foot_c_J_R/D_Foot_b_J_R/D_Foot_a_J_R/ikHandle1
+    m_Weight: 1
+  - m_Path: D_Foot_a_G/D_Foot_a_Ctrl/transform1/D_Foot_d_J_talon/D_Foot_c_J_R/D_Foot_b_J_R/D_Foot_a_J_R/ikHandle2
+    m_Weight: 1
+  - m_Path: D_Foot_a_G/D_Foot_a_Ctrl/transform1/D_Foot_d_J_talon/D_Foot_c_J_R/group1
+    m_Weight: 1
+  - m_Path: D_Foot_a_G/D_Foot_a_Ctrl/transform1/D_Foot_d_J_talon/D_Foot_c_J_R/group1/ikHandle3
+    m_Weight: 1
+  - m_Path: D_Leg_2_G
+    m_Weight: 1
+  - m_Path: D_Leg_2_G/I_Leg_2_Ctrl
+    m_Weight: 1
+  - m_Path: I_Brazo_G_1
+    m_Weight: 1
+  - m_Path: I_Brazo_G_1/I_Brazo_C_1
+    m_Weight: 1
+  - m_Path: I_Brazo_G_1/I_Brazo_C_1/I_Brazo_G_2
+    m_Weight: 1
+  - m_Path: I_Brazo_G_1/I_Brazo_C_1/I_Brazo_G_2/I_Brazo_C_2
+    m_Weight: 1
+  - m_Path: I_Brazo_G_1/I_Brazo_C_1/I_Brazo_G_2/I_Brazo_C_2/I_Brazo_G_3
+    m_Weight: 1
+  - m_Path: I_Brazo_G_1/I_Brazo_C_1/I_Brazo_G_2/I_Brazo_C_2/I_Brazo_G_3/I_Brazo_C_3
+    m_Weight: 1
+  - m_Path: I_Brazo_G_1/I_Brazo_C_1/I_Brazo_G_2/I_Brazo_C_2/I_Brazo_G_3/I_Brazo_C_3/I_dedo_G_1_a
+    m_Weight: 1
+  - m_Path: I_Brazo_G_1/I_Brazo_C_1/I_Brazo_G_2/I_Brazo_C_2/I_Brazo_G_3/I_Brazo_C_3/I_dedo_G_1_a/I_dedo_C_1_a
+    m_Weight: 1
+  - m_Path: I_Brazo_G_1/I_Brazo_C_1/I_Brazo_G_2/I_Brazo_C_2/I_Brazo_G_3/I_Brazo_C_3/I_dedo_G_1_a/I_dedo_C_1_a/I_dedo_G_1_b
+    m_Weight: 1
+  - m_Path: I_Brazo_G_1/I_Brazo_C_1/I_Brazo_G_2/I_Brazo_C_2/I_Brazo_G_3/I_Brazo_C_3/I_dedo_G_1_a/I_dedo_C_1_a/I_dedo_G_1_b/I_dedo_C_1_b
+    m_Weight: 1
+  - m_Path: I_Brazo_G_1/I_Brazo_C_1/I_Brazo_G_2/I_Brazo_C_2/I_Brazo_G_3/I_Brazo_C_3/I_dedo_G_1_a/I_dedo_C_1_a/I_dedo_G_1_b/I_dedo_C_1_b/I_dedo_G_1_c
+    m_Weight: 1
+  - m_Path: I_Brazo_G_1/I_Brazo_C_1/I_Brazo_G_2/I_Brazo_C_2/I_Brazo_G_3/I_Brazo_C_3/I_dedo_G_1_a/I_dedo_C_1_a/I_dedo_G_1_b/I_dedo_C_1_b/I_dedo_G_1_c/I_dedo_C_1_c
+    m_Weight: 1
+  - m_Path: I_Brazo_G_1/I_Brazo_C_1/I_Brazo_G_2/I_Brazo_C_2/I_Brazo_G_3/I_Brazo_C_3/I_dedo_G_1_a/I_dedo_C_1_a/I_dedo_G_1_b/I_dedo_C_1_b/I_dedo_G_1_c/I_dedo_C_1_c/I_dedo_G_1_d
+    m_Weight: 1
+  - m_Path: I_Brazo_G_1/I_Brazo_C_1/I_Brazo_G_2/I_Brazo_C_2/I_Brazo_G_3/I_Brazo_C_3/I_dedo_G_1_a/I_dedo_C_1_a/I_dedo_G_1_b/I_dedo_C_1_b/I_dedo_G_1_c/I_dedo_C_1_c/I_dedo_G_1_d/I_dedo_C_1_d
+    m_Weight: 1
+  - m_Path: I_Brazo_G_1/I_Brazo_C_1/I_Brazo_G_2/I_Brazo_C_2/I_Brazo_G_3/I_Brazo_C_3/I_dedo_G_2_a
+    m_Weight: 1
+  - m_Path: I_Brazo_G_1/I_Brazo_C_1/I_Brazo_G_2/I_Brazo_C_2/I_Brazo_G_3/I_Brazo_C_3/I_dedo_G_2_a/I_dedo_C_2_a
+    m_Weight: 1
+  - m_Path: I_Brazo_G_1/I_Brazo_C_1/I_Brazo_G_2/I_Brazo_C_2/I_Brazo_G_3/I_Brazo_C_3/I_dedo_G_2_a/I_dedo_C_2_a/I_dedo_G_2_b
+    m_Weight: 1
+  - m_Path: I_Brazo_G_1/I_Brazo_C_1/I_Brazo_G_2/I_Brazo_C_2/I_Brazo_G_3/I_Brazo_C_3/I_dedo_G_2_a/I_dedo_C_2_a/I_dedo_G_2_b/I_dedo_C_2_b
+    m_Weight: 1
+  - m_Path: I_Brazo_G_1/I_Brazo_C_1/I_Brazo_G_2/I_Brazo_C_2/I_Brazo_G_3/I_Brazo_C_3/I_dedo_G_2_a/I_dedo_C_2_a/I_dedo_G_2_b/I_dedo_C_2_b/I_dedo_G_2_c
+    m_Weight: 1
+  - m_Path: I_Brazo_G_1/I_Brazo_C_1/I_Brazo_G_2/I_Brazo_C_2/I_Brazo_G_3/I_Brazo_C_3/I_dedo_G_2_a/I_dedo_C_2_a/I_dedo_G_2_b/I_dedo_C_2_b/I_dedo_G_2_c/I_dedo_C_2_c
+    m_Weight: 1
+  - m_Path: I_Brazo_G_1/I_Brazo_C_1/I_Brazo_G_2/I_Brazo_C_2/I_Brazo_G_3/I_Brazo_C_3/I_dedo_G_2_a/I_dedo_C_2_a/I_dedo_G_2_b/I_dedo_C_2_b/I_dedo_G_2_c/I_dedo_C_2_c/I_dedo_G_2_d
+    m_Weight: 1
+  - m_Path: I_Brazo_G_1/I_Brazo_C_1/I_Brazo_G_2/I_Brazo_C_2/I_Brazo_G_3/I_Brazo_C_3/I_dedo_G_2_a/I_dedo_C_2_a/I_dedo_G_2_b/I_dedo_C_2_b/I_dedo_G_2_c/I_dedo_C_2_c/I_dedo_G_2_d/I_dedo_C_2_d
+    m_Weight: 1
+  - m_Path: I_Brazo_G_1/I_Brazo_C_1/I_Brazo_G_2/I_Brazo_C_2/I_Brazo_G_3/I_Brazo_C_3/I_dedo_G_3_a
+    m_Weight: 1
+  - m_Path: I_Brazo_G_1/I_Brazo_C_1/I_Brazo_G_2/I_Brazo_C_2/I_Brazo_G_3/I_Brazo_C_3/I_dedo_G_3_a/I_dedo_C_3_a
+    m_Weight: 1
+  - m_Path: I_Brazo_G_1/I_Brazo_C_1/I_Brazo_G_2/I_Brazo_C_2/I_Brazo_G_3/I_Brazo_C_3/I_dedo_G_3_a/I_dedo_C_3_a/I_dedo_G_3_b
+    m_Weight: 1
+  - m_Path: I_Brazo_G_1/I_Brazo_C_1/I_Brazo_G_2/I_Brazo_C_2/I_Brazo_G_3/I_Brazo_C_3/I_dedo_G_3_a/I_dedo_C_3_a/I_dedo_G_3_b/I_dedo_C_3_b
+    m_Weight: 1
+  - m_Path: I_Brazo_G_1/I_Brazo_C_1/I_Brazo_G_2/I_Brazo_C_2/I_Brazo_G_3/I_Brazo_C_3/I_dedo_G_3_a/I_dedo_C_3_a/I_dedo_G_3_b/I_dedo_C_3_b/I_dedo_G_3_c
+    m_Weight: 1
+  - m_Path: I_Brazo_G_1/I_Brazo_C_1/I_Brazo_G_2/I_Brazo_C_2/I_Brazo_G_3/I_Brazo_C_3/I_dedo_G_3_a/I_dedo_C_3_a/I_dedo_G_3_b/I_dedo_C_3_b/I_dedo_G_3_c/I_dedo_C_3_c
+    m_Weight: 1
+  - m_Path: I_Brazo_G_1/I_Brazo_C_1/I_Brazo_G_2/I_Brazo_C_2/I_Brazo_G_3/I_Brazo_C_3/I_dedo_G_3_a/I_dedo_C_3_a/I_dedo_G_3_b/I_dedo_C_3_b/I_dedo_G_3_c/I_dedo_C_3_c/I_dedo_G_3_d
+    m_Weight: 1
+  - m_Path: I_Brazo_G_1/I_Brazo_C_1/I_Brazo_G_2/I_Brazo_C_2/I_Brazo_G_3/I_Brazo_C_3/I_dedo_G_3_a/I_dedo_C_3_a/I_dedo_G_3_b/I_dedo_C_3_b/I_dedo_G_3_c/I_dedo_C_3_c/I_dedo_G_3_d/I_dedo_C_3_d
+    m_Weight: 1
+  - m_Path: I_Brazo_G_1/I_Brazo_C_1/I_Brazo_G_2/I_Brazo_C_2/I_Brazo_G_3/I_Brazo_C_3/I_dedo_G_4_a
+    m_Weight: 1
+  - m_Path: I_Brazo_G_1/I_Brazo_C_1/I_Brazo_G_2/I_Brazo_C_2/I_Brazo_G_3/I_Brazo_C_3/I_dedo_G_4_a/I_dedo_C_4_a
+    m_Weight: 1
+  - m_Path: I_Brazo_G_1/I_Brazo_C_1/I_Brazo_G_2/I_Brazo_C_2/I_Brazo_G_3/I_Brazo_C_3/I_dedo_G_4_a/I_dedo_C_4_a/I_dedo_G_4_b
+    m_Weight: 1
+  - m_Path: I_Brazo_G_1/I_Brazo_C_1/I_Brazo_G_2/I_Brazo_C_2/I_Brazo_G_3/I_Brazo_C_3/I_dedo_G_4_a/I_dedo_C_4_a/I_dedo_G_4_b/I_dedo_C_4_a
+      1
+    m_Weight: 1
+  - m_Path: I_Brazo_G_1/I_Brazo_C_1/I_Brazo_G_2/I_Brazo_C_2/I_Brazo_G_3/I_Brazo_C_3/I_dedo_G_4_a/I_dedo_C_4_a/I_dedo_G_4_b/I_dedo_C_4_a
+      1/I_dedo_G_1_a5
+    m_Weight: 1
+  - m_Path: I_Brazo_G_1/I_Brazo_C_1/I_Brazo_G_2/I_Brazo_C_2/I_Brazo_G_3/I_Brazo_C_3/I_dedo_G_4_a/I_dedo_C_4_a/I_dedo_G_4_b/I_dedo_C_4_a
+      1/I_dedo_G_1_a5/I_dedo_C_1_a 1
+    m_Weight: 1
+  - m_Path: I_Foot_a_G
+    m_Weight: 1
+  - m_Path: I_Foot_a_G/I_Foot_a_Ctrl
+    m_Weight: 1
+  - m_Path: I_Foot_a_G/I_Foot_a_Ctrl/transform1 1
+    m_Weight: 1
+  - m_Path: I_Foot_a_G/I_Foot_a_Ctrl/transform1 1/I_Foot_d_J_talon
+    m_Weight: 1
+  - m_Path: I_Foot_a_G/I_Foot_a_Ctrl/transform1 1/I_Foot_d_J_talon/I_Foot_c_J_R
+    m_Weight: 1
+  - m_Path: I_Foot_a_G/I_Foot_a_Ctrl/transform1 1/I_Foot_d_J_talon/I_Foot_c_J_R/group1
+      1
+    m_Weight: 1
+  - m_Path: I_Foot_a_G/I_Foot_a_Ctrl/transform1 1/I_Foot_d_J_talon/I_Foot_c_J_R/group1
+      1/I_Foot_b_IKH_R
+    m_Weight: 1
+  - m_Path: I_Foot_a_G/I_Foot_a_Ctrl/transform1 1/I_Foot_d_J_talon/I_Foot_c_J_R/I_Foot_b_J_R
+    m_Weight: 1
+  - m_Path: I_Foot_a_G/I_Foot_a_Ctrl/transform1 1/I_Foot_d_J_talon/I_Foot_c_J_R/I_Foot_b_J_R/I_Foot_a_IK
+    m_Weight: 1
+  - m_Path: I_Foot_a_G/I_Foot_a_Ctrl/transform1 1/I_Foot_d_J_talon/I_Foot_c_J_R/I_Foot_b_J_R/I_Foot_a_IKH_R
+    m_Weight: 1
+  - m_Path: I_Foot_a_G/I_Foot_a_Ctrl/transform1 1/I_Foot_d_J_talon/I_Foot_c_J_R/I_Foot_b_J_R/I_Foot_a_J_R
+    m_Weight: 1
+  - m_Path: I_Leg_2_G
+    m_Weight: 1
+  - m_Path: I_Leg_2_G/I_Leg_2_Ctrl 1
+    m_Weight: 1
+  - m_Path: Player_G
+    m_Weight: 1
+  - m_Path: Player_G/pasted__C1_
+    m_Weight: 1
+  - m_Path: Player_G/pasted__C2
+    m_Weight: 1
+  - m_Path: Player_G/pasted__C3_
+    m_Weight: 1
+  - m_Path: Player_G/pasted__C4_
+    m_Weight: 1
+  - m_Path: Player_G/pasted__C5
+    m_Weight: 1
+  - m_Path: Player_G/pasted__C6_
+    m_Weight: 1
+  - m_Path: Player_G/pasted__C7
+    m_Weight: 1
+  - m_Path: Player_G/pasted__C8_
+    m_Weight: 1
+  - m_Path: Player_G/pasted__C9_
+    m_Weight: 1
+  - m_Path: Player_G/pasted__C10_
+    m_Weight: 1
+  - m_Path: Player_G/pasted__C11_
+    m_Weight: 1
+  - m_Path: Player_G/pasted__C12_
+    m_Weight: 1
+  - m_Path: Player_G/pasted__C13_
+    m_Weight: 1
+  - m_Path: Player_G/pasted__C14_
+    m_Weight: 1
+  - m_Path: Player_G/pasted__C15
+    m_Weight: 1
+  - m_Path: Player_G/pasted__C16_
+    m_Weight: 1
+  - m_Path: Player_G/pasted__C17_
+    m_Weight: 1
+  - m_Path: Player_G/pasted__C18_
+    m_Weight: 1
+  - m_Path: Player_G/pasted__C19_
+    m_Weight: 1
+  - m_Path: Player_G/pasted__C20_
+    m_Weight: 1
+  - m_Path: Player_G/pasted__C21_
+    m_Weight: 1
+  - m_Path: Player_G/pasted__C22
+    m_Weight: 1
+  - m_Path: Player_G/pasted__C23
+    m_Weight: 1
+  - m_Path: Player_G/pasted__C24_
+    m_Weight: 1
+  - m_Path: Player_G/pasted__C25_
+    m_Weight: 1
+  - m_Path: Player_G/pasted__C26_
+    m_Weight: 1
+  - m_Path: Player_G/pasted__C27_
+    m_Weight: 1
+  - m_Path: Player_G/pasted__C28_
+    m_Weight: 1
+  - m_Path: Player_G/pasted__C29_
+    m_Weight: 1
+  - m_Path: Player_G/pasted__C30
+    m_Weight: 1
+  - m_Path: Player_G/pasted__C31
+    m_Weight: 1
+  - m_Path: Player_G/pasted__C32_
+    m_Weight: 1
+  - m_Path: Player_G/pasted__C33_
+    m_Weight: 1
+  - m_Path: Player_G/pasted__C34_
+    m_Weight: 1
+  - m_Path: Player_G/pasted__Cadena_1
+    m_Weight: 1
+  - m_Path: Player_G/pasted__Cadena_2
+    m_Weight: 1
+  - m_Path: Player_G/pasted__Player_M
+    m_Weight: 1
+  - m_Path: Player_G/pasted__Player_Nariz_M
+    m_Weight: 1
+  - m_Path: ROOT
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/Colum_2_j
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/Colum_2_j/Colum_3_j
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/Colum_2_j/Colum_3_j/Colum_4_j
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/Colum_2_j/Colum_3_j/Colum_4_j/Clavi_D_j
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/Colum_2_j/Colum_3_j/Colum_4_j/Clavi_D_j/D_Brazo_J_1
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/Colum_2_j/Colum_3_j/Colum_4_j/Clavi_D_j/D_Brazo_J_1/D_Brazo_J_2
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/Colum_2_j/Colum_3_j/Colum_4_j/Clavi_D_j/D_Brazo_J_1/D_Brazo_J_2/D_Brazo_J_3
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/Colum_2_j/Colum_3_j/Colum_4_j/Clavi_D_j/D_Brazo_J_1/D_Brazo_J_2/D_Brazo_J_3/D_dedo_J_1_a
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/Colum_2_j/Colum_3_j/Colum_4_j/Clavi_D_j/D_Brazo_J_1/D_Brazo_J_2/D_Brazo_J_3/D_dedo_J_1_a/D_dedo_J_1_b
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/Colum_2_j/Colum_3_j/Colum_4_j/Clavi_D_j/D_Brazo_J_1/D_Brazo_J_2/D_Brazo_J_3/D_dedo_J_1_a/D_dedo_J_1_b/D_dedo_J_1_c
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/Colum_2_j/Colum_3_j/Colum_4_j/Clavi_D_j/D_Brazo_J_1/D_Brazo_J_2/D_Brazo_J_3/D_dedo_J_1_a/D_dedo_J_1_b/D_dedo_J_1_c/D_dedo_J_1_d
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/Colum_2_j/Colum_3_j/Colum_4_j/Clavi_D_j/D_Brazo_J_1/D_Brazo_J_2/D_Brazo_J_3/D_dedo_J_2_a
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/Colum_2_j/Colum_3_j/Colum_4_j/Clavi_D_j/D_Brazo_J_1/D_Brazo_J_2/D_Brazo_J_3/D_dedo_J_2_a/D_dedo_J_2_b
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/Colum_2_j/Colum_3_j/Colum_4_j/Clavi_D_j/D_Brazo_J_1/D_Brazo_J_2/D_Brazo_J_3/D_dedo_J_2_a/D_dedo_J_2_b/D_dedo_J_2_c
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/Colum_2_j/Colum_3_j/Colum_4_j/Clavi_D_j/D_Brazo_J_1/D_Brazo_J_2/D_Brazo_J_3/D_dedo_J_2_a/D_dedo_J_2_b/D_dedo_J_2_c/D_dedo_J_2_d
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/Colum_2_j/Colum_3_j/Colum_4_j/Clavi_D_j/D_Brazo_J_1/D_Brazo_J_2/D_Brazo_J_3/D_dedo_J_3_a
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/Colum_2_j/Colum_3_j/Colum_4_j/Clavi_D_j/D_Brazo_J_1/D_Brazo_J_2/D_Brazo_J_3/D_dedo_J_3_a/D_dedo_J_3_b
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/Colum_2_j/Colum_3_j/Colum_4_j/Clavi_D_j/D_Brazo_J_1/D_Brazo_J_2/D_Brazo_J_3/D_dedo_J_3_a/D_dedo_J_3_b/D_dedo_J_3_c
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/Colum_2_j/Colum_3_j/Colum_4_j/Clavi_D_j/D_Brazo_J_1/D_Brazo_J_2/D_Brazo_J_3/D_dedo_J_3_a/D_dedo_J_3_b/D_dedo_J_3_c/D_dedo_J_3_d
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/Colum_2_j/Colum_3_j/Colum_4_j/Clavi_D_j/D_Brazo_J_1/D_Brazo_J_2/D_Brazo_J_3/D_dedo_J_4_a
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/Colum_2_j/Colum_3_j/Colum_4_j/Clavi_D_j/D_Brazo_J_1/D_Brazo_J_2/D_Brazo_J_3/D_dedo_J_4_a/D_dedo_J_4_b
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/Colum_2_j/Colum_3_j/Colum_4_j/Clavi_D_j/D_Brazo_J_1/D_Brazo_J_2/D_Brazo_J_3/D_dedo_J_4_a/D_dedo_J_4_b/D_dedo_J_4_c
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/Colum_2_j/Colum_3_j/Colum_4_j/Clavi_I_j
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/Colum_2_j/Colum_3_j/Colum_4_j/Clavi_I_j/I_Brazo_J_1
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/Colum_2_j/Colum_3_j/Colum_4_j/Clavi_I_j/I_Brazo_J_1/I_Brazo_J_2
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/Colum_2_j/Colum_3_j/Colum_4_j/Clavi_I_j/I_Brazo_J_1/I_Brazo_J_2/I_Brazo_J_3
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/Colum_2_j/Colum_3_j/Colum_4_j/Clavi_I_j/I_Brazo_J_1/I_Brazo_J_2/I_Brazo_J_3/I_dedo_J_1_a
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/Colum_2_j/Colum_3_j/Colum_4_j/Clavi_I_j/I_Brazo_J_1/I_Brazo_J_2/I_Brazo_J_3/I_dedo_J_1_a/I_dedo_J_1_b
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/Colum_2_j/Colum_3_j/Colum_4_j/Clavi_I_j/I_Brazo_J_1/I_Brazo_J_2/I_Brazo_J_3/I_dedo_J_1_a/I_dedo_J_1_b/I_dedo_J_1_c
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/Colum_2_j/Colum_3_j/Colum_4_j/Clavi_I_j/I_Brazo_J_1/I_Brazo_J_2/I_Brazo_J_3/I_dedo_J_1_a/I_dedo_J_1_b/I_dedo_J_1_c/I_dedo_J_1_d
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/Colum_2_j/Colum_3_j/Colum_4_j/Clavi_I_j/I_Brazo_J_1/I_Brazo_J_2/I_Brazo_J_3/I_dedo_J_2_a
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/Colum_2_j/Colum_3_j/Colum_4_j/Clavi_I_j/I_Brazo_J_1/I_Brazo_J_2/I_Brazo_J_3/I_dedo_J_2_a/I_dedo_J_2_b
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/Colum_2_j/Colum_3_j/Colum_4_j/Clavi_I_j/I_Brazo_J_1/I_Brazo_J_2/I_Brazo_J_3/I_dedo_J_2_a/I_dedo_J_2_b/I_dedo_J_2_c
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/Colum_2_j/Colum_3_j/Colum_4_j/Clavi_I_j/I_Brazo_J_1/I_Brazo_J_2/I_Brazo_J_3/I_dedo_J_2_a/I_dedo_J_2_b/I_dedo_J_2_c/I_dedo_J_2_d
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/Colum_2_j/Colum_3_j/Colum_4_j/Clavi_I_j/I_Brazo_J_1/I_Brazo_J_2/I_Brazo_J_3/I_dedo_J_3_a
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/Colum_2_j/Colum_3_j/Colum_4_j/Clavi_I_j/I_Brazo_J_1/I_Brazo_J_2/I_Brazo_J_3/I_dedo_J_3_a/I_dedo_J_3_b
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/Colum_2_j/Colum_3_j/Colum_4_j/Clavi_I_j/I_Brazo_J_1/I_Brazo_J_2/I_Brazo_J_3/I_dedo_J_3_a/I_dedo_J_3_b/I_dedo_J_3_c
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/Colum_2_j/Colum_3_j/Colum_4_j/Clavi_I_j/I_Brazo_J_1/I_Brazo_J_2/I_Brazo_J_3/I_dedo_J_3_a/I_dedo_J_3_b/I_dedo_J_3_c/I_dedo_J_3_d
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/Colum_2_j/Colum_3_j/Colum_4_j/Clavi_I_j/I_Brazo_J_1/I_Brazo_J_2/I_Brazo_J_3/I_dedo_J_4_a
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/Colum_2_j/Colum_3_j/Colum_4_j/Clavi_I_j/I_Brazo_J_1/I_Brazo_J_2/I_Brazo_J_3/I_dedo_J_4_a/I_dedo_J_4_b
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/Colum_2_j/Colum_3_j/Colum_4_j/Clavi_I_j/I_Brazo_J_1/I_Brazo_J_2/I_Brazo_J_3/I_dedo_J_4_a/I_dedo_J_4_b/I_dedo_J_4_c
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/Colum_2_j/Colum_3_j/Colum_4_j/Cuello_j
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/Colum_2_j/Colum_3_j/Colum_4_j/Cuello_j/Cabeza_1_j
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/Colum_2_j/Colum_3_j/Colum_4_j/Cuello_j/Cabeza_1_j/Cabeza_2_j
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/I_Leg_1_J
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/I_Leg_1_J/I_Leg_2_J
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/I_Leg_1_J/I_Leg_2_J/I_Foot_a_J
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/I_Leg_1_J/I_Leg_2_J/I_Foot_a_J/I_Foot_b_J
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/I_Leg_1_J/I_Leg_2_J/I_Foot_a_J/I_Foot_b_J/I_Foot_c_J
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/I_Leg_1_J1
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/I_Leg_1_J1/I_Leg_2_J1
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/I_Leg_1_J1/I_Leg_2_J1/I_Foot_a_J1
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/I_Leg_1_J1/I_Leg_2_J1/I_Foot_a_J1/I_Foot_b_J1
+    m_Weight: 1
+  - m_Path: ROOT/Colum_1_j/I_Leg_1_J1/I_Leg_2_J1/I_Foot_a_J1/I_Foot_b_J1/I_Foot_c_J1
+    m_Weight: 1
+  - m_Path: Root_G
+    m_Weight: 1
+  - m_Path: Root_G/Root_C
+    m_Weight: 1
+  - m_Path: Root_G/Root_C/Colum_1_G
+    m_Weight: 1
+  - m_Path: Root_G/Root_C/Colum_1_G/Colum_1_C
+    m_Weight: 1
+  - m_Path: Root_G/Root_C/Colum_1_G/Colum_1_C/Colum_2_G
+    m_Weight: 1
+  - m_Path: Root_G/Root_C/Colum_1_G/Colum_1_C/Colum_2_G/Colum_2_C
+    m_Weight: 1
+  - m_Path: Root_G/Root_C/Colum_1_G/Colum_1_C/Colum_2_G/Colum_2_C/Colum_3_G
+    m_Weight: 1
+  - m_Path: Root_G/Root_C/Colum_1_G/Colum_1_C/Colum_2_G/Colum_2_C/Colum_3_G/Colum_3_C
+    m_Weight: 1
+  - m_Path: Root_G/Root_C/Colum_1_G/Colum_1_C/Colum_2_G/Colum_2_C/Colum_3_G/Colum_3_C/Colum_4_G
+    m_Weight: 1
+  - m_Path: Root_G/Root_C/Colum_1_G/Colum_1_C/Colum_2_G/Colum_2_C/Colum_3_G/Colum_3_C/Colum_4_G/Colum_4_C
+    m_Weight: 1
+  - m_Path: Root_G/Root_C/Colum_1_G/Colum_1_C/Colum_2_G/Colum_2_C/Colum_3_G/Colum_3_C/Colum_4_G/Colum_4_C/Clavi_D_G
+    m_Weight: 1
+  - m_Path: Root_G/Root_C/Colum_1_G/Colum_1_C/Colum_2_G/Colum_2_C/Colum_3_G/Colum_3_C/Colum_4_G/Colum_4_C/Clavi_D_G/Clavi_D_C
+    m_Weight: 1
+  - m_Path: Root_G/Root_C/Colum_1_G/Colum_1_C/Colum_2_G/Colum_2_C/Colum_3_G/Colum_3_C/Colum_4_G/Colum_4_C/Clavi_I_G
+    m_Weight: 1
+  - m_Path: Root_G/Root_C/Colum_1_G/Colum_1_C/Colum_2_G/Colum_2_C/Colum_3_G/Colum_3_C/Colum_4_G/Colum_4_C/Clavi_I_G/Clavi_I_C
+    m_Weight: 1
+  - m_Path: Root_G/Root_C/Colum_1_G/Colum_1_C/Colum_2_G/Colum_2_C/Colum_3_G/Colum_3_C/Colum_4_G/Colum_4_C/G_Cuello_1
+    m_Weight: 1
+  - m_Path: Root_G/Root_C/Colum_1_G/Colum_1_C/Colum_2_G/Colum_2_C/Colum_3_G/Colum_3_C/Colum_4_G/Colum_4_C/G_Cuello_1/C_Cuello_1
+    m_Weight: 1
+  - m_Path: Root_G/Root_C/Colum_1_G/Colum_1_C/Colum_2_G/Colum_2_C/Colum_3_G/Colum_3_C/Colum_4_G/Colum_4_C/G_Cuello_1/C_Cuello_1/G_Cuello_2
+    m_Weight: 1
+  - m_Path: Root_G/Root_C/Colum_1_G/Colum_1_C/Colum_2_G/Colum_2_C/Colum_3_G/Colum_3_C/Colum_4_G/Colum_4_C/G_Cuello_1/C_Cuello_1/G_Cuello_2/C_Cuello_2
+    m_Weight: 1

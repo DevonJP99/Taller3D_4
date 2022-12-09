@@ -7,6 +7,7 @@ public class EnemyManager : MonoBehaviour
     // spawn common enemy in stores 
     // activate guardias qeu estand esactivados por default
 
+
     [SerializeField]
     List<Transform> toGoPoints;
     [SerializeField]
@@ -19,6 +20,7 @@ public class EnemyManager : MonoBehaviour
     GameObject enemyPrefab;
 
     public float secondsToScore = 60 * 5;
+    public int qEnemies = 60;
 
     float delt = 0;
 
@@ -36,7 +38,7 @@ public class EnemyManager : MonoBehaviour
     private void Start()
     {
         //instancia enemys y activa gaurdia 0
-        for (int i = 0; i < 20; i++)
+        for (int i = 0; i < qEnemies; i++)
         {
             GameObject enemy = Instantiate(enemyPrefab, stores[(int)(Random.value * stores.Count)].position, Quaternion.identity, transform);
             enemy.GetComponent<EnemyCompradorStatePasive>().pointsToGo = toGoPoints;

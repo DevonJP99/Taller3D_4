@@ -8,7 +8,7 @@ public class PlayerStaticVariable : MonoBehaviour
 {
     TinyCarController controll;
     ProducCaracter producCarac;
-    public GameObject weapon;
+    //public GameObject weapon;
     public int cantiProc;
     public int compras;
     public int Maxcompras;

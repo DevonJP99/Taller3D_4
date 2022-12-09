@@ -20,7 +20,7 @@ public class EnemyManager : MonoBehaviour
     GameObject enemyPrefab;
 
     public float secondsToScore = 60 * 5;
-    public int qEnemies = 60;
+    public int qEnemies;
 
     float delt = 0;
 

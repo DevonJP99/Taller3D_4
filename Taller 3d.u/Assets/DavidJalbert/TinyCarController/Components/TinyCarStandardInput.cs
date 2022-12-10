@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using GameAudioScriptingEssentials;
 
 namespace DavidJalbert
 {
@@ -12,9 +13,18 @@ namespace DavidJalbert
         public TinyCarController carController;
         public Staminacontroller staminaController;
         [SerializeField]
-        private bool readyToboost;
+        private bool readyToboost=false;
         public float boostNormal;
-    
+        [SerializeField]
+        private  bool isSprinting;
+        [SerializeField]
+        private bool iswalking;
+        [SerializeField]
+        private bool readyTowalk = false;
+
+        [SerializeField] AudioClipRandomizer footsteps;
+        [SerializeField] AudioClipRandomizer sprinteps;
+
         public enum InputType
         {
             None, Axis, RawAxis, Key, Button
@@ -74,8 +84,15 @@ namespace DavidJalbert
                 }
             }*/
             boost();
-
-
+            if(!readyToboost && isSprinting && !iswalking)
+            {
+                StartCoroutine(Sprit());
+            }
+            if(!readyTowalk && iswalking && !isSprinting)
+            {
+                StartCoroutine(Walk());
+            }
+            ruidomove();
             carController.setSteering(steeringDelta);
             carController.setMotor(motorDelta);
         }
@@ -93,26 +110,64 @@ namespace DavidJalbert
             if (v.invert) value *= -1;
             return Mathf.Clamp01(value);
         }
-        public void CDBosst()
-        {
-            readyToboost = true;
-           
-        }
+       
         public void boost()
         {
             if (Input.GetKey(KeyCode.LeftShift) && staminaController.cartStamina >= 0 && staminaController.hasRegenerated == true)
             {
+                StartCoroutine(Sprit());
                 carController.setBoostMultiplier(2);
                 staminaController.Sprinting();
                 MejorasStatic.sprint = true;
+                isSprinting = true;
+                iswalking = false;
+                
             }
             if(Input.GetKeyUp(KeyCode.LeftShift) || staminaController.cartStamina<=0)
             {
+                readyToboost = false;
                 MejorasStatic.sprint = false;
                 carController.setBoostMultiplier(1);
                 staminaController.CartSprinting = false;
+                StopCoroutine(Sprit());
+                isSprinting = false;
+                
+                
             }
         }
-     
+        IEnumerator Sprit()
+        {
+            readyToboost = true;
+            if(isSprinting)
+            {
+                footsteps.PlaySFX();
+                yield return new WaitForSeconds(boostCoolOff/12.0f);
+
+            }
+            readyToboost = false;
+        }
+        IEnumerator Walk()
+        {
+            readyTowalk = true;
+            if(iswalking)
+            {
+                sprinteps.PlaySFX();
+                yield return new WaitForSeconds(boostCoolOff / 12.0f);
+            }
+            readyTowalk = false;
+        }
+     public void ruidomove()
+        {
+            if(Input.GetKey(KeyCode.W))
+            {
+                iswalking = true;
+            }
+            if(Input.GetKeyUp(KeyCode.W))
+            {
+                iswalking = false;
+            }
+            
+
+        }
     }
 }

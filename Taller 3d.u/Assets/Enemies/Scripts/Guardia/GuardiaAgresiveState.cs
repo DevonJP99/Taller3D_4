@@ -7,6 +7,7 @@ public class GuardiaAgresiveState : EnemyBaseState
     public Transform entrancePosition;
     float agresivespeed = 20;
 
+   
     public override void CollisionEnter(EnemyBaseStateMachine manager, Collision collision)
     {
         if (collision.gameObject.CompareTag(manager.name_player_tag))

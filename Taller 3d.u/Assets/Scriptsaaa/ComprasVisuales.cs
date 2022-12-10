@@ -5,7 +5,7 @@ using UnityEngine;
 public class ComprasVisuales : MonoBehaviour
 {
     /*public List<GameObject> Objetos;*/
-    public GameObject Espacio1;
+    
     public Renderer rend;
     public int a;
     PlayerStaticVariable compras;

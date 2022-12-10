@@ -6,10 +6,12 @@ using DavidJalbert;
 public class Grounds : MonoBehaviour
 {
     TinyCarSurface surface;
+    public GameObject piso;
     // Start is called before the first frame update
     void Start()
     {
-        surface = GameObject.Find("Ground").GetComponent<TinyCarSurface>();
+        piso.GetComponent<TinyCarSurface>();
+        
     }
 
     // Update is called once per frame

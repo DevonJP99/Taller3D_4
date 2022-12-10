@@ -6,6 +6,7 @@ public class GuardiaAgresiveState : EnemyBaseState
 {
     public Transform entrancePosition;
     float agresivespeed = 20;
+    public Animator anim;
 
    
     public override void CollisionEnter(EnemyBaseStateMachine manager, Collision collision)
@@ -19,6 +20,7 @@ public class GuardiaAgresiveState : EnemyBaseState
             int comm = collision.gameObject.GetComponent<PlayerStaticVariable>().compras;
             collision.gameObject.GetComponent<PlayerStaticVariable>().compras = comm > 0 ? (int)(comm /2) : 0; 
             manager.playerDetected = null;
+            anim.SetBool("Following", false);
             GetComponent<EnemyBaseStateMachine>().SwitchState(GetComponent<EnemyBaseStateMachine>().pasive);
         }
     }
@@ -44,6 +46,7 @@ public class GuardiaAgresiveState : EnemyBaseState
     {
         if (other.CompareTag(manager.name_player_tag))
         {
+            anim.SetBool("Following", false);
             manager.playerDetected = null;
             manager.SwitchState(manager.pasive);
         }

@@ -8,9 +8,9 @@ public class ProducCaracter : MonoBehaviour
     public int size;
     public string Name;
     public int price;
-    public int descuento;
-    public int puntaje;
-    public int actualPunt;
+    private int descuento;
+    private int puntaje;
+    private int actualPunt;
     public int a = 1;
     public bool pesado=false;
     /*public bool interactuable;

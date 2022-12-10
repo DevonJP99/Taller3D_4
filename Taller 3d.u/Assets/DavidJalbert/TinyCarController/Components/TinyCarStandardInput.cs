@@ -131,8 +131,6 @@ namespace DavidJalbert
                 staminaController.CartSprinting = false;
                 StopCoroutine(Sprit());
                 isSprinting = false;
-                
-                
             }
         }
         IEnumerator Sprit()

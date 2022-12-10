@@ -84,7 +84,7 @@ public class ProducCaracter : MonoBehaviour
     }
     public void Puntos()
     {
-        puntaje = price +(price* descuento)/100;
+        puntaje = price + (price*(descuento)/100);
         actualPunt = puntaje;
     }
     public void LimitOfers()

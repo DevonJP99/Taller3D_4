@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class GuardiaPasiveState : EnemyCompradorStatePasive
 {
-
+    public Animator anim;
+    
     public override void TriggerEnter(EnemyBaseStateMachine manager, Collider collider)
     {
         if (collider.gameObject.CompareTag(manager.name_player_tag))
         {
             manager.playerDetected = collider.gameObject.GetComponent<PlayerStaticVariable>();
             manager.GetNavMeshAgent().destination = transform.position;
+            anim.SetBool("Following", true);
             manager.SwitchState(manager.agresive);
         }
     }

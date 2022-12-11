@@ -24,15 +24,12 @@ public class Tutorial : MonoBehaviour
     {
         if(key.tutokey == 3 )
         {
-            if(produc.Equipment==true)
-            {
-                tutoComplete = true;
-            }
+            tutoComplete = true;
         }
     }
     public void loadOptions()
     {
-        SceneManager.LoadScene("copia-zonadepruebas");
+        SceneManager.LoadScene("Final");
     }
     private void OnTriggerEnter(Collider other)
     {

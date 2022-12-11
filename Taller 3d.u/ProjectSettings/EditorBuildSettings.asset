@@ -18,14 +18,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Creditos.unity
     guid: f14de13f181fb444d8e7209efd5d925d
   - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 1
     path: Assets/Scenes/copia/copia-zonadepruebas.unity
     guid: a3c9a36fb64cee84e80b94a88b388a9b
+  - enabled: 1
+    path: Assets/Scenes/Final/Final.unity
+    guid: 7123bcecb1875ac40a58fa0f12539ee1
   - enabled: 1
     path: Assets/Scenes/Tutorial.unity
     guid: 68cc3daadb327b146ade2558b8e84cee

@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class ProducCaracter : MonoBehaviour
 {
+   
     public PlayerStaticVariable compras;
+   
     public int size;
     public string Name;
     public int price;
@@ -39,7 +41,8 @@ public class ProducCaracter : MonoBehaviour
     {
 
         LimitOfers();
-        
+      
+
         /*if (compras.compras + size <= compras.Maxcompras && interactuable && Input.GetKeyDown(KeyCode.E) && MejorasStatic.ofertaslimitas == false)
         {
             compras.cantiProc++;
@@ -57,7 +60,7 @@ public class ProducCaracter : MonoBehaviour
             AutoDestruccion();
         }*/
 
-        
+
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -101,6 +104,7 @@ public class ProducCaracter : MonoBehaviour
             actualPunt = puntaje;
         } 
     } 
+    
   
     
 }

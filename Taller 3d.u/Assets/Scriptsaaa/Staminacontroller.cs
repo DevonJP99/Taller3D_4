@@ -45,7 +45,7 @@ public class Staminacontroller : MonoBehaviour
                 {
                     //normal Speed
                     
-                    controllerCustom.maxSpeedForward = 25f;
+                    
                     controllerCustom.setBoostMultiplier(1);
                     
                     sliderCanvasgroup.alpha = 0;
@@ -66,7 +66,7 @@ public class Staminacontroller : MonoBehaviour
                 //slowSpeed
                 
                 hasRegenerated = false;
-                controllerCustom.maxSpeedForward = 10f;
+                
                 sliderCanvasgroup.alpha = 0;
             }
             

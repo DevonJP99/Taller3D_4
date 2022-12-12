@@ -9,6 +9,7 @@ public class Compras : MonoBehaviour
     public float time;
     public float timerepeat;
     public float timer;
+    public float textotime;
     public TextMeshProUGUI Ofertas;
     
     private void Start()
@@ -38,6 +39,8 @@ public class Compras : MonoBehaviour
         yield return new WaitForSeconds(timerepeat);
         Ofertas.text = "OFERTAS TERMINADAS";
         MejorasStatic.ofertaslimitas = false;
+        yield return new WaitForSeconds(timer);
+        Ofertas.text = "";
     }
 
 }

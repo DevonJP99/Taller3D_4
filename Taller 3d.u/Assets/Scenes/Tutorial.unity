@@ -2845,7 +2845,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh143140
+  m_Name: pb_Mesh264738
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3292,7 +3292,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh141772
+  m_Name: pb_Mesh263324
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14162,6 +14162,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ad8711d156576e4a92fcf7c81f7551e, type: 3}
+--- !u!134 &495630016
+PhysicMaterial:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: DynamicMaterial
+  dynamicFriction: 0
+  staticFriction: 0
+  bounciness: 0
+  frictionCombine: 1
+  bounceCombine: 1
 --- !u!1001 &496208569
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14440,7 +14452,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 501666328}
-  m_Material: {fileID: 1455664865}
+  m_Material: {fileID: 495630016}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -22769,7 +22781,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh141962
+  m_Name: pb_Mesh263534
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -35437,7 +35449,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57ff532830f38ed4dba307563dd16a42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brillo: {fileID: 0}
+  pantalla: {fileID: 0}
+  musica: {fileID: 0}
+  volumefx: {fileID: 0}
+  mixed: {fileID: 0}
+  fxsource: {fileID: 0}
+  clipsound: {fileID: 0}
   panelprincipal: {fileID: 0}
+  panelopciones: {fileID: 0}
   panelsalida: {fileID: 0}
 --- !u!114 &1231902689
 MonoBehaviour:
@@ -37986,7 +38006,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh142992
+  m_Name: pb_Mesh264584
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -39208,7 +39228,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh142624
+  m_Name: pb_Mesh264216
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -40409,18 +40429,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ad8711d156576e4a92fcf7c81f7551e, type: 3}
---- !u!134 &1455664865
-PhysicMaterial:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: DynamicMaterial
-  dynamicFriction: 0
-  staticFriction: 0
-  bounciness: 0
-  frictionCombine: 1
-  bounceCombine: 1
 --- !u!1001 &1456769081
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41131,7 +41139,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh143748
+  m_Name: pb_Mesh265376
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -47046,7 +47054,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -21.319519, y: 70}
+  m_AnchoredPosition: {x: -92.1, y: 70}
   m_SizeDelta: {x: 580.716, y: 197.318}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1534119707

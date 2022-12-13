@@ -24,13 +24,13 @@ public class SceneManagement : MonoBehaviour
 
     private void Awake()
     {
-        volumefx.onValueChanged.AddListener(changevolumeFX);
-        musica.onValueChanged.AddListener(changevolumeMaster);
+       // volumefx.onValueChanged.AddListener(changevolumeFX);
+        //musica.onValueChanged.AddListener(changevolumeMaster);
     }
     public void openpanel(GameObject panel)
     {
         panelprincipal.SetActive(false);
-        panelopciones.SetActive(false);
+        //panelopciones.SetActive(false);
        // panelpuntaje.SetActive(false);
         panelsalida.SetActive(false);
 

@@ -401,7 +401,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -194.65784, y: -2}
+  m_AnchoredPosition: {x: -194.6578, y: -2}
   m_SizeDelta: {x: -1710, y: -1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &444076177
@@ -550,7 +550,7 @@ VideoPlayer:
   m_TargetAudioSources:
   - {fileID: 0}
   m_DirectAudioVolumes:
-  - 1
+  - 0.5
   m_Url: 
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
@@ -1076,5 +1076,4 @@ MonoBehaviour:
   clipsound: {fileID: 0}
   panelprincipal: {fileID: 0}
   panelopciones: {fileID: 0}
-  panelpuntaje: {fileID: 0}
   panelsalida: {fileID: 0}

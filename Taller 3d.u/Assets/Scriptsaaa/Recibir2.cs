@@ -18,8 +18,6 @@ public class Recibir2 : MonoBehaviour
             compras.puntajeScreen = compras.puntajeScreen + compras.puntaje;
             compras.puntaje = 0;
             MejorasStatic.pesado = false;
-
-            
         }
     }
 }

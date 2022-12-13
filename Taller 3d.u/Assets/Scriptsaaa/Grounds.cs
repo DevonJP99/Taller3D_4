@@ -10,7 +10,8 @@ public class Grounds : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        piso.GetComponent<TinyCarSurface>();
+        
+        surface = piso.GetComponent<TinyCarSurface>();
         
     }
 

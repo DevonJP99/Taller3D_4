@@ -21,7 +21,7 @@ MonoBehaviour:
   _randomPitch: 1
   _minPitch: 0.8
   _maxPitch: 1.2
-  _volume: 0.089
+  _volume: 0.01
   _loop: 0
   _priority: 128
   _stereoPan: 0

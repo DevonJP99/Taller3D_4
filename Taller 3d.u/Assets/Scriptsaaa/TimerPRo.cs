@@ -11,10 +11,13 @@ public class TimerPRo : MonoBehaviour
     [Header("Timer UI references:")]
     [SerializeField] private Image uiFillImage;
     [SerializeField] private TextMeshProUGUI uiText;
+
+    PlayerStaticVariable player;
     public int Duration { get; private set; }
     private int remainDuration;
     private void Awake()
     {
+        player = GameObject.Find("Cart Controller").GetComponent<PlayerStaticVariable>();
         resetTimer();
     }
     private void resetTimer()
@@ -51,6 +54,8 @@ public class TimerPRo : MonoBehaviour
     }
     public void End()
     {
+        MejorasStatic.totalP = MejorasStatic.totalP + player.cantiProc;
+        MejorasStatic.puntoT = MejorasStatic.puntoT + player.puntajeScreen;
         SceneManager.LoadScene("Puntaje");
         resetTimer();
     }

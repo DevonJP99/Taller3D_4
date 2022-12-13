@@ -56,7 +56,7 @@ public class SceneManagement : MonoBehaviour
 
     public void loadgame()
     {
-        SceneManager.LoadScene("Zona de Pruebas");
+        SceneManager.LoadScene("Final");
     }
 
     public void loadcredits()
@@ -78,4 +78,6 @@ public class SceneManagement : MonoBehaviour
     {
         SceneManager.LoadScene("Tutorial");
     }
+
+    
 }

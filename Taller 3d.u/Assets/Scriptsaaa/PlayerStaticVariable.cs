@@ -25,6 +25,13 @@ public class PlayerStaticVariable : MonoBehaviour
     public bool Equipment;
 
     public bool interactuable=false;
+
+
+    private void Awake()
+    {
+        Time.timeScale = 1f;
+        MejorasStatic.puntoT = 0;
+    }
     void Start()
     {
 

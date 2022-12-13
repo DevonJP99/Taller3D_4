@@ -25,10 +25,10 @@ public class animatorPlayercontroller : MonoBehaviour
     private void Update()
     {
         animator.SetFloat("Blend", rigidbody.velocity.magnitude / 25);
-        if (Input.GetKeyDown(KeyCode.R))
+       /* if (Input.GetKeyDown(KeyCode.R))
         {
             ToggleRagDoll(!ragdollStatus);
-        }
+        }*/
     }
 
 

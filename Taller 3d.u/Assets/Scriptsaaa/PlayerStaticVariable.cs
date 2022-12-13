@@ -31,6 +31,7 @@ public class PlayerStaticVariable : MonoBehaviour
     {
         Time.timeScale = 1f;
         MejorasStatic.puntoT = 0;
+        MejorasStatic.totalP = 0;
     }
     void Start()
     {

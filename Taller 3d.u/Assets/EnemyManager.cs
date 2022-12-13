@@ -17,7 +17,7 @@ public class EnemyManager : MonoBehaviour
     [SerializeField]
     GameObject[] Guards;
     [SerializeField]
-    GameObject enemyPrefab;
+    List<GameObject> enemyPrefab;
 
     public float secondsToScore = 60 * 5;
     public int qEnemies;
@@ -40,7 +40,7 @@ public class EnemyManager : MonoBehaviour
         //instancia enemys y activa gaurdia 0
         for (int i = 0; i < qEnemies; i++)
         {
-            GameObject enemy = Instantiate(enemyPrefab, stores[(int)(Random.value * stores.Count)].position, Quaternion.identity, transform);
+            GameObject enemy = Instantiate(enemyPrefab[Random.Range(0, enemyPrefab.Count)], stores[(int)(Random.value * stores.Count)].position, Quaternion.identity, transform);
             enemy.GetComponent<EnemyCompradorStatePasive>().pointsToGo = toGoPoints;
             enemieSpawned.Add(enemy);
             enemy.SetActive(true);

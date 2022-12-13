@@ -2184,15 +2184,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57ff532830f38ed4dba307563dd16a42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brillo: {fileID: 0}
-  pantalla: {fileID: 0}
-  musica: {fileID: 0}
-  volumefx: {fileID: 0}
-  mixed: {fileID: 24100000, guid: 5b3cc607f186f8045a65d8c1207cff44, type: 2}
-  fxsource: {fileID: 0}
-  clipsound: {fileID: 8300000, guid: 801994042383baa41bfb88e90ff79cf0, type: 3}
+  mixed: {fileID: 24100000, guid: 615c0feaf5f7d2c419d8f8747b02fa4f, type: 2}
+  fxsource: {fileID: 418263346}
+  clipsound: {fileID: 8300000, guid: 70e6f47b855a5824daceb98c0bfb27bb, type: 3}
   panelprincipal: {fileID: 1145614980}
-  panelopciones: {fileID: 0}
   panelsalida: {fileID: 564295654}
 --- !u!1 &1389857699
 GameObject:
@@ -2901,7 +2896,7 @@ AudioSource:
   m_GameObject: {fileID: 1881801659}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -4935128801306959000, guid: 615c0feaf5f7d2c419d8f8747b02fa4f, type: 2}
   m_audioClip: {fileID: 8300000, guid: 801994042383baa41bfb88e90ff79cf0, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1

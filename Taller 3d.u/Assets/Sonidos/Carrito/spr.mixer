@@ -19,6 +19,39 @@ AudioMixerGroupController:
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
+--- !u!243 &-4610842782612086833
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Ambient 2
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 141a22a866a67b74db9ba0a72f4aa13d
+  m_Children: []
+  m_Volume: e539b37b0b40aef46a15a3d86cdfaff3
+  m_Pitch: 2499d9d9596436243981a0df46543517
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: -4092002266531918964}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!244 &-4092002266531918964
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 9dd3207eaf2bcb14483b52146de972bf
+  m_EffectName: Attenuation
+  m_MixLevel: a1a9ee7138105d94aaf55c7d28a9feaa
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!244 &-3529758156918508731
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -56,6 +89,7 @@ AudioMixerController:
     - 7060583c45ebb064daa95bcc00f5c756
     - 9ae4eeeba54b8ef41a9bcc0e18445754
     - 169b5ac9b896cf44a9b7105da7837dd6
+    - 141a22a866a67b74db9ba0a72f4aa13d
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -73,6 +107,7 @@ AudioMixerGroupController:
   - {fileID: 8905050010886115560}
   - {fileID: 3443568942152150852}
   - {fileID: -4935128801306959000}
+  - {fileID: -4610842782612086833}
   m_Volume: 547f5631657dd5740adc1500391c930b
   m_Pitch: 7d4b802bd31e5c14d92566b31452ebc2
   m_Send: 00000000000000000000000000000000
@@ -108,7 +143,9 @@ AudioMixerSnapshotController:
   m_FloatValues:
     0f07537073445fd488f19a7af2980acd: 0.12
     c2e7a223df7f6c443822c80170d66f23: -13.6
+    2499d9d9596436243981a0df46543517: 1
     3a0f08fac20cc2d49ae217ec9adc75b0: 1.58
+    e539b37b0b40aef46a15a3d86cdfaff3: 17.5
     a68aae5cbfdfa254ca148eb74127e386: -5.4
   m_TransitionOverrides: {}
 --- !u!243 &2509800768199763363

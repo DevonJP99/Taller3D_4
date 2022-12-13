@@ -19,7 +19,7 @@ public class SceneManagement : MonoBehaviour
     [Header("paneles")]
     public GameObject panelprincipal;
     public GameObject panelopciones;
-    public GameObject panelpuntaje;
+    //public GameObject panelpuntaje;
     public GameObject panelsalida;
 
     private void Awake()
@@ -31,7 +31,7 @@ public class SceneManagement : MonoBehaviour
     {
         panelprincipal.SetActive(false);
         panelopciones.SetActive(false);
-        panelpuntaje.SetActive(false);
+       // panelpuntaje.SetActive(false);
         panelsalida.SetActive(false);
 
         panel.SetActive(true);
@@ -52,8 +52,10 @@ public class SceneManagement : MonoBehaviour
     {
         fxsource.PlayOneShot(clipsound);
     }
-
-
+    public void leaderboar()
+    {
+        SceneManager.LoadScene("Puntaje");
+    }
     public void loadgame()
     {
         SceneManager.LoadScene("Final");

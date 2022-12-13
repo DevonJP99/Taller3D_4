@@ -2354,6 +2354,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57ff532830f38ed4dba307563dd16a42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brillo: {fileID: 0}
+  pantalla: {fileID: 0}
+  musica: {fileID: 0}
+  volumefx: {fileID: 0}
+  mixed: {fileID: 0}
+  fxsource: {fileID: 0}
+  clipsound: {fileID: 0}
+  panelprincipal: {fileID: 0}
+  panelopciones: {fileID: 0}
+  panelsalida: {fileID: 0}
 --- !u!1 &1912479731
 GameObject:
   m_ObjectHideFlags: 0

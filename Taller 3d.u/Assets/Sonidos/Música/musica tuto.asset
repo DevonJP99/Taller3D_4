@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 94ee00c9f24b3bc44976a64350dcfbd6, type: 3}
-  m_Name: SonidoExterior
+  m_Name: musica tuto
   m_EditorClassIdentifier: 
   _audioClips:
-  - {fileID: 8300000, guid: cce461783800383438fe1dfb807f291c, type: 3}
-  _mixerGroup: {fileID: -4935128801306959000, guid: 615c0feaf5f7d2c419d8f8747b02fa4f, type: 2}
+  - {fileID: 8300000, guid: 93f6397277e0a724ba400a950fffaaf4, type: 3}
+  _mixerGroup: {fileID: -4610842782612086833, guid: 615c0feaf5f7d2c419d8f8747b02fa4f, type: 2}
   _noRepeats: 0
-  _randomPitch: 0
-  _minPitch: 1
-  _maxPitch: 1
+  _randomPitch: 1
+  _minPitch: 0.5
+  _maxPitch: 1.5
   _volume: 1
   _loop: 1
-  _priority: 64
+  _priority: 128
   _stereoPan: 0
   _spatialBlend: 0

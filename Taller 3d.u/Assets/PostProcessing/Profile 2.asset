@@ -33,7 +33,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 15.6
+    value: 1
   threshold:
     overrideState: 1
     value: 1
@@ -51,7 +51,7 @@ MonoBehaviour:
     value: 0
   color:
     overrideState: 1
-    value: {r: 1, g: 0.5764296, b: 0.0047169924, a: 1}
+    value: {r: 0, g: 0.0940752, b: 1, a: 1}
   fastMode:
     overrideState: 0
     value: 0
@@ -83,10 +83,10 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 0.16
+    value: 0
   color:
     overrideState: 1
-    value: {r: 0.9811321, g: 0.7725066, b: 0, a: 1}
+    value: {r: 0, g: 0.11777644, b: 0.98039216, a: 1}
   ambientOnly:
     overrideState: 0
     value: 1
@@ -101,7 +101,7 @@ MonoBehaviour:
     value: -12
   thicknessModifier:
     overrideState: 1
-    value: 2.52
+    value: 3.17
   directLightingStrength:
     overrideState: 0
     value: 0
